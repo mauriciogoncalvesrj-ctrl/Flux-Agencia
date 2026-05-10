@@ -1,0 +1,272 @@
+{
+  "jobs": [
+    {
+      "id": "4f4d6a7762f7",
+      "name": "traefik-network-fix",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "fix-traefik-network.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 5,
+        "display": "every 5m"
+      },
+      "schedule_display": "every 5m",
+      "repeat": {
+        "times": null,
+        "completed": 455
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-08T21:16:44.753913+00:00",
+      "next_run_at": "2026-05-10T11:19:59.578481+00:00",
+      "last_run_at": "2026-05-10T11:14:59.578481+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "4d6bad237e66",
+      "name": "flux-vps-backup",
+      "prompt": "VPS backup script executed",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "backup-vps.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-09T17:59:28.757029+00:00",
+      "next_run_at": "2026-05-11T03:00:00+00:00",
+      "last_run_at": "2026-05-10T03:00:22.343578+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "1e7a00249756",
+      "name": "flux-conteudo-semanal",
+      "prompt": "Voc\u00ea \u00e9 o Agente de Conte\u00fado da Ag\u00eancia Flux. Gere o calend\u00e1rio editorial semanal para a cl\u00ednica de est\u00e9tica.\n\nUse a skill flux-agencia-conteudo para produzir:\n\n1. Calend\u00e1rio editorial completo (SEG a DOM)\n2. Para cada dia: tipo de pe\u00e7a, pilar de conte\u00fado, t\u00edtulo, legenda completa, hashtags, CTA\n3. 2 Reels com roteiro completo\n4. 2 Posts Carrossel com estrutura de 5 slides (gerar SVGs se poss\u00edvel)\n\nContexto padr\u00e3o (ajuste se o usu\u00e1rio j\u00e1 tiver fornecido):\n- Cl\u00ednica de est\u00e9tica\n- P\u00fablico: mulheres 25-55 anos, classe A/B\n- Canais: Instagram + Meta Ads\n- Pilares: Educa\u00e7\u00e3o 40%, Prova Social 30%, Autoridade 20%, Venda Sutil 10%\n\nFormato: listas e key:value (sem tabelas pipe, Telegram n\u00e3o suporta)\n\nEntregue tudo pronto para revisar e publicar.",
+      "skills": [
+        "flux-agencia-conteudo",
+        "flux-agencia-pipeline"
+      ],
+      "skill": "flux-agencia-conteudo",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1",
+        "display": "0 9 * * 1"
+      },
+      "schedule_display": "0 9 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-09T18:09:08.023254+00:00",
+      "next_run_at": "2026-05-11T09:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "6d35070b3247",
+      "name": "flux-anuncios-semanal",
+      "prompt": "Voc\u00ea \u00e9 o Copywriter e Especialista em Tr\u00e1fego da Ag\u00eancia Flux. Gere o pacote semanal de an\u00fancios para a cl\u00ednica de est\u00e9tica.\n\nUse as skills flux-agencia-copywriting e flux-agencia-trafego para produzir:\n\n1. CAMPANHA DE AQUISI\u00c7\u00c3O (3 c\u00f3pias + sugest\u00e3o de criativo)\n2. CAMPANHA DE CONVERS\u00c3O (3 c\u00f3pias + sugest\u00e3o de criativo)\n3. CAMPANHA DE REMARKETING (2 c\u00f3pias + sugest\u00e3o de criativo)\n\nPara cada copy: headline, texto prim\u00e1rio completo, CTA, framework usado (PAS/AIDA/StorySelling)\n\nContexto padr\u00e3o:\n- Cl\u00ednica de est\u00e9tica\n- P\u00fablico: mulheres 25-55, classe A/B\n- Objetivo: agendamento de avalia\u00e7\u00e3o\n- Canal: Meta Ads (Instagram + Facebook)\n- Or\u00e7amento sugerido: R$1.500-3.000/semana\n\nTamb\u00e9m incluir:\n- Estrat\u00e9gia de tr\u00e1fego: distribui\u00e7\u00e3o de or\u00e7amento, p\u00fablicos, KPIs meta\n- Checklist de lan\u00e7amento\n\nFormato: listas e key:value (sem tabelas pipe)\n\nEntregue tudo pronto para revisar e publicar.",
+      "skills": [
+        "flux-agencia-copywriting",
+        "flux-agencia-trafego",
+        "flux-agencia-pipeline"
+      ],
+      "skill": "flux-agencia-copywriting",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 9 * * 1",
+        "display": "30 9 * * 1"
+      },
+      "schedule_display": "30 9 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-09T18:09:30.123289+00:00",
+      "next_run_at": "2026-05-11T09:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "72470a4e714a",
+      "name": "Flux Daily Briefing 9h",
+      "prompt": "Execute o flux-daily-briefing skill: pesquise novidades sobre IA, LLMs, GHL, Claude Code, OpenClaw, Hermes Agent e outros frameworks. Gere o relat\u00f3rio matinal completo em portugu\u00eas no formato especificado pela skill. IMPORTANTE: use web_search para fazer as buscas. Se web_search falhar, tente usar o terminal com curl para acessar APIs de not\u00edcias.",
+      "skills": [
+        "flux-daily-briefing"
+      ],
+      "skill": "flux-daily-briefing",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-10T03:24:34.299565+00:00",
+      "next_run_at": "2026-05-10T12:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "search"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "e3325069a1b6",
+      "name": "Hermes GitHub Backup",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "hermes-backup.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-10T11:18:42.848683+00:00",
+      "next_run_at": "2026-05-11T03:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-05-10T11:18:42.849222+00:00"
+}

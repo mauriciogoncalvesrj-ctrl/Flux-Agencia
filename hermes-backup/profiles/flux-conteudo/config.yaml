@@ -1,0 +1,22 @@
+agent:
+  max_turns: 50
+  tool_use_enforcement: true
+display:
+  show_cost: false
+  show_reasoning: true
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+model:
+  default: claude-3-haiku-20240307
+  provider: anthropic
+skills:
+  auto_load:
+  - flux-agencia-conteudo
+toolsets:
+  enabled:
+  - web
+  - search
+  - file
+  - memory
+  - image_gen

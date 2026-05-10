@@ -1,0 +1,21 @@
+agent:
+  max_turns: 50
+  tool_use_enforcement: true
+display:
+  show_cost: false
+  show_reasoning: true
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+model:
+  default: gpt-4o
+  provider: openai
+skills:
+  auto_load:
+  - flux-agencia-trafego
+toolsets:
+  enabled:
+  - web
+  - search
+  - file
+  - memory
