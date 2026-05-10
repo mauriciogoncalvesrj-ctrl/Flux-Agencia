@@ -142,6 +142,19 @@
     "use_count": 2,
     "view_count": 2
   },
+  "hermes-github-backup": {
+    "archived_at": null,
+    "created_at": "2026-05-10T11:20:39.206490+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-05-10T11:24:25.342644+00:00",
+    "last_used_at": "2026-05-10T11:24:29.119411+00:00",
+    "last_viewed_at": "2026-05-10T11:24:29.117465+00:00",
+    "patch_count": 3,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
   "local-llm-deployment": {
     "archived_at": null,
     "created_at": "2026-05-10T02:08:19.135307+00:00",

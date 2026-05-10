@@ -1,0 +1,72 @@
+# Hermes Agent Backup - Somos Flux
+# Backup automático diário da configuração do agente
+
+# SEGREDOS - NUNCA commitar
+.env
+*.env
+auth.json
+auth.lock
+*.token
+*_TOKEN=*
+*_KEY=*
+*_SECRET=*
+
+# Sessões (histórico de conversas, muito grandes)
+sessions/
+*.jsonl
+
+# Logs
+logs/
+*.log
+
+# Cache e temporários
+cache/
+.cache/
+audio_cache/
+image_cache/
+images/
+__pycache__/
+*.pyc
+*.pyo
+node_modules/
+.npm/
+.pytest_cache/
+.playwright/
+
+# Sandboxes
+sandboxes/
+
+# Backups locais (já estamos fazendo backup!)
+backups/
+*.tar.gz
+
+# Binários e venvs
+bin/
+*venv/
+.venv/
+
+# WebUI sessions
+webui/sessions/
+
+# Lock files
+.lock
+*.lock
+.tick.lock
+
+# IDE e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Source code (reinstalável)
+hermes-agent/
+hermes/
+hermes-webui/
+
+# Configuração de canais (contém tokens)
+channel_directory.json
+
+# System files
+.DS_Store
+Thumbs.db

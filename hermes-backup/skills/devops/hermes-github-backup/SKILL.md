@@ -79,7 +79,16 @@ python3 /opt/data/hermes-backup-repo/hermes-backup/backup.py
 
 | Problema | Solução |
 |----------|---------|
-| `git push` 403 | Token não tem permissão de escrita — recrie com scope `repo` (classic) ou `Contents: R/W` (fine-grained) |
-| GITHUB_TOKEN não encontrado | Adicione `GITHUB_TOKEN=seu_token` em `/opt/data/.env` |
+| `git push` 403 | Token não tem permissão de escrita — recrie com scope `repo` (classic) ou `Contents: R/W` (fine-grained). Veja `github-auth` skill → `references/fine-grained-pat-triage.md` |
+| GITHUB_TOKEN não encontrado | Adicione `GITHUB_TOKEN=seu_token` em `/opt/data/.env` (não em `~/.hermes/.env` — o cron usa HERMES_HOME) |
 | "nada a commitar" | Normal — nenhuma mudança desde o último backup |
 | Repo não existe | Verifique que o repo `Flux-Agencia` existe no GitHub |
+| HOME path mismatch no Docker | O script já usa token-in-URL (`git remote set-url origin https://user:token@...`) para evitar problemas com credential store em containers |
+| Script não encontra `/opt/data/.env` | Cron jobs executam com `HERMES_HOME=/opt/data`. O script tenta ambos `/opt/data/.env` e `~/.hermes/.env` como fallback |
+| Histórico muito grande (sessions) | Sessions NUNCA vão pro backup — o `.gitignore` bloqueia `sessions/` e `*.jsonl` |
+
+## Suporte
+
+- **Script de backup**: `scripts/backup.py` — copiar para `~/.hermes/scripts/hermes-backup.py` para uso com cron `no_agent=true`
+- **Template .gitignore**: `templates/.gitignore` — usar como base ao configurar novo repo de backup
+- **Diagnóstico de token**: skill `github-auth` → `references/fine-grained-pat-triage.md`

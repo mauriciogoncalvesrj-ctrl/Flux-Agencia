@@ -50,6 +50,19 @@ This is the most portable method — works everywhere, no SSH config needed.
 
 Tell the user to go to: **https://github.com/settings/tokens**
 
+**⚠️ IMPORTANT: Two token types exist — choose correctly on the first attempt:**
+
+| Type | Prefix | Page | Write permission | Notes |
+|------|--------|------|------------------|-------|
+| **Classic PAT** (recommended) | `ghp_` | https://github.com/settings/tokens | `repo` scope | One scope gives full read+write. Always works. |
+| Fine-grained PAT | `github_pat_` | https://github.com/settings/tokens?type=beta | `Contents: Read and write` | Defaults to READ-ONLY. Must manually set write permission per repo. |
+
+**If the user already created a token that fails with 403 on push, check its prefix:**
+- `ghp_*` → Classic PAT. If push fails, the `repo` scope is missing. Regenerate.
+- `github_pat_*` → Fine-grained PAT. Push fails because `Contents` defaults to read-only. Tell the user to go to https://github.com/settings/tokens?type=beta, click the token, find **Contents** under Repository permissions, and change it to **"Read and write"**.
+
+**For Classic PAT (recommended for simplicity):**
+
 - Click "Generate new token (classic)"
 - Give it a name like "hermes-agent"
 - Select scopes:
@@ -99,13 +112,32 @@ git config --global user.email "their-email@example.com"
 **Step 4: Verify**
 
 ```bash
-# Test push access (this should work without any prompts now)
+# Test READ access (this should work even with read-only tokens)
 git ls-remote https://github.com/<their-username>/<any-repo>.git
+
+# Test WRITE access via API (catches fine-grained PATs without Contents:Write)
+curl -s -o /dev/null -w "%{http_code}" \
+  -H "Authorization: Bearer $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  "https://api.github.com/repos/<their-username>/<repo>/git/trees/main?recursive=1"
+# HTTP 200 = read OK. For write test, try creating a file via API:
+# If 403 "Resource not accessible by personal access token" → fine-grained PAT needs Contents:Read and write
 
 # Verify identity
 git config --global user.name
 git config --global user.email
 ```
+
+### Container/Docker Pitfall: HOME path mismatch
+
+In Docker containers, `$HOME` and `~` may point to different paths than the agent's `HERMES_HOME`:
+- `credential.helper store` writes to `$HOME/.git-credentials` (e.g. `/opt/data/home/.git-credentials`)
+- But `git push` may look for credentials at a different `~`
+- **Fix**: Embed the token directly in the remote URL instead of relying on credential store:
+```bash
+git remote set-url origin "https://<username>:<token>@github.com/<owner>/<repo>.git"
+```
+This bypasses the credential helper entirely and works regardless of HOME path.
 
 ### Option B: SSH Key Authentication
 
@@ -235,6 +267,8 @@ fi
 
 ## Troubleshooting
 
+For detailed token diagnosis (403 on push, fine-grained vs classic), see `references/fine-grained-pat-triage.md`.
+
 | Problem | Solution |
 |---------|----------|
 | `git push` asks for password | GitHub disabled password auth. Use a personal access token as the password, or switch to SSH |
@@ -244,3 +278,6 @@ fi
 | Credentials not persisting | Check `git config --global credential.helper` — must be `store` or `cache` |
 | Multiple GitHub accounts | Use SSH with different keys per host alias in `~/.ssh/config`, or per-repo credential URLs |
 | `gh: command not found` + no sudo | Use git-only Method 1 above — no installation needed |
+| `git push` 403 but `git ls-remote` works | Fine-grained PAT defaults to read-only. Go to https://github.com/settings/tokens?type=beta → click token → Repository permissions → Contents → change to "Read and write". Or switch to Classic PAT with `repo` scope. |
+| `git push` 403 "Resource not accessible by personal access token" | Same as above — fine-grained PAT lacks write permission on Contents. Also check the token is authorized for the specific repository (fine-grained PATs are repo-scoped). |
+| Git credentials lost after container restart | Docker containers may have mismatched HOME paths. Use token-in-URL instead: `git remote set-url origin https://<user>:<token>@github.com/<owner>/<repo>.git` |
