@@ -1,0 +1,22 @@
+agent:
+  max_turns: 50
+  tool_use_enforcement: true
+display:
+  show_cost: false
+  show_reasoning: true
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+model:
+  default: deepseek-chat
+  provider: deepseek
+skills:
+  auto_load:
+  - flux-agencia-inteligencia
+toolsets:
+  enabled:
+  - web
+  - search
+  - browser
+  - file
+  - memory

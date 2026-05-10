@@ -1,0 +1,7 @@
+User is Brazilian Portuguese speaker with limited technical knowledge. Prefers simple, direct explanations without jargon. Uses Hostinger VPS managed panel heavily, including the "Atualizar" button. Expects expert recommendations with pros/cons/reasoning when making decisions — does not want to be told just 'do X' without understanding why. When proposing solutions, prioritize simplicity, explain practical relevance, and avoid assuming Docker/YAML knowledge.
+§
+O usuário quer que eu sempre identifique o modelo e provider que estou usando no INÍCIO de cada resposta, no formato: ⚡ usando deepseek-v4-pro (ollama-cloud) seguido de uma linha ────────────────────────── separando da resposta propriamente dita. Se o modelo mudar (ex: modelo de visão auxiliar), devo indicar o modelo correto.
+§
+When user reports a recurring problem on a previously-configured service/domain, always start with `session_search` to check for recent fixes before running new diagnostics. The user explicitly corrects assistants who begin diagnosing from scratch without checking history.
+§
+User explicitly controls task execution: will queue up multiple tasks and only wants me to start them when they explicitly say "inicia" or "pode iniciar". Do not auto-execute queued tasks without explicit go-ahead. User may send multiple messages (audio + text) before giving the start command.
