@@ -1,0 +1,46 @@
+# =============================================================
+# SENSÍVEL — JAMAIS COMMITAR
+# =============================================================
+.credentials.json
+mcp-needs-auth-cache.json
+
+# =============================================================
+# HISTÓRICO DE CONVERSAS (privado + potencialmente grande)
+# =============================================================
+projects/**/*.jsonl
+projects/**/subagents/
+projects/**/tool-results/
+
+# =============================================================
+# AUTO-GERADO / TEMPORÁRIO
+# =============================================================
+backups/
+file-history/
+session-env/
+sessions/
+shell-snapshots/
+cache/
+downloads/
+ide/
+.last-cleanup
+
+# =============================================================
+# HISTÓRICO DE COMANDOS
+# =============================================================
+history.jsonl
+
+# =============================================================
+# REPO ANINHADO — gerenciado separadamente
+# Remova esta linha e rode: git submodule add <URL> skills/marketingskills
+# se quiser vincular como submodule
+# =============================================================
+skills/marketingskills/
+
+# =============================================================
+# O QUE SERÁ VERSIONADO (referência)
+# =============================================================
+# settings.json             ← configuração do Claude Code
+# plugins/                  ← plugins e marketplace
+# skills/flux-context.md    ← contexto Flux
+# plans/                    ← planos (atualmente vazio)
+# projects/*/memory/*.md    ← memórias de projeto (contexto Flux/Mauricio)

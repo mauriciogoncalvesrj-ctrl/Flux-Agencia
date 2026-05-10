@@ -1,0 +1,4 @@
+- [Stack Flux sem n8n](stack_decisao_n8n.md) — n8n removido oficialmente; GHL é o CRM unificado e faz orquestração interna
+- [Arquitetura 7 agentes](arquitetura_7_agentes.md) — CEO Hermes + 6 Diretores; estrutura definida em agents/ com modelos alocados
+- [Modelo de negócio Flux](modelo_negocio_planos.md) — 3 planos (Start/Conversão/Autônomo); Autônomo é o novo flagship R$ 4.500-6.500/mês
+- [Brand Flux — não citar GHL](brand_no_ghl.md) — cliente final NUNCA pode saber que é GHL; sempre "Sistema Flux 360"
