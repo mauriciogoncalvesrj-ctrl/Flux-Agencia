@@ -2,20 +2,14 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.anthropic.com)",
-      "PowerShell(git -C \"C:\\\\Users\\\\windows\\\\.claude\" status 2>&1)",
-      "PowerShell(gh --version 2>&1)",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\windows\\\\.claude\\\\skills\" -Depth 0 -Force | Where-Object { $_.Name -eq \".git\" } | Format-Table Name; Get-ChildItem \"C:\\\\Users\\\\windows\\\\.claude\\\\plugins\" -Depth 0 -Force | Where-Object { $_.Name -eq \".git\" } | Format-Table Name)",
-      "PowerShell(git -C \"C:\\\\Users\\\\windows\\\\.claude\" init)",
-      "PowerShell(git -C \"C:\\\\Users\\\\windows\\\\.claude\" config user.name \"Mauricio Goncalves\")",
-      "PowerShell(git -C \"C:\\\\Users\\\\windows\\\\.claude\" config user.email \"mauriciogoncalvesrj@gmail.com\")",
-      "PowerShell(git -C \"C:\\\\Users\\\\windows\\\\.claude\" add .)",
-      "PowerShell(git -C \"C:\\\\Users\\\\windows\\\\.claude\" status --short)",
-      "PowerShell(head -50)"
+      "Bash(git*)",
+      "PowerShell(git*)"
     ],
     "additionalDirectories": [
       "C:\\Users\\windows\\.claude\\plans"
     ]
   },
   "autoUpdatesChannel": "latest",
-  "theme": "dark"
+  "theme": "dark",
+  "effortLevel": "high"
 }
