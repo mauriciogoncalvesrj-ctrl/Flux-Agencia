@@ -106,3 +106,6 @@ Fal.ai provides 40+ AI models for image and video generation via a single API. T
 - Free tier has limited credits — monitor usage with `get_usage`
 - Some models (GPT Image 2) use token-based pricing — check `get_pricing` first
 - Resolution multipliers: 2K = 1.5x, 4K = 2x the base price
+- **CRITICAL: Each model has DIFFERENT valid `image_size` values.** Flux models use `portrait_3_4`/`portrait_9_16`; GPT Image 2 uses `portrait_4_3`/`portrait_16_9`. Using wrong size = wasted API call. See `social-media-carousels` skill → `references/fal-ai-model-sizes.md` for full table.
+- **GPT Image 2 often times out** (120s+) via MCP — prefer `image_generate` built-in tool for text-on-image tasks
+- **The `image_generate` tool is a reliable alternative** that handles size mapping internally and produces PNG directly — use it when MCP calls fail

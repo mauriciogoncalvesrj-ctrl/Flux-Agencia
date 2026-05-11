@@ -59,6 +59,9 @@ Precisa de um token GitHub com permissão de ESCRITA. Dois caminhos:
 
 O backup usa o repositório `Flux-Agencia` na pasta `hermes-backup/`.
 
+**Para documentação de referência (opcional):**
+Se quiser manter um manifesto legível (como `HERMES_MANIFEST.md`) no repo raiz, veja o procedimento em `references/api-direct-upload.md` — permite commitar vĩa API REST sem precisar do git CLI instalado.
+
 ### 3. Configurar cron
 
 ```bash
@@ -79,16 +82,20 @@ python3 /opt/data/hermes-backup-repo/hermes-backup/backup.py
 
 | Problema | Solução |
 |----------|---------|
-| `git push` 403 | Token não tem permissão de escrita — recrie com scope `repo` (classic) ou `Contents: R/W` (fine-grained). Veja `github-auth` skill → `references/fine-grained-pat-triage.md` |
-| GITHUB_TOKEN não encontrado | Adicione `GITHUB_TOKEN=seu_token` em `/opt/data/.env` (não em `~/.hermes/.env` — o cron usa HERMES_HOME) |
+| `git push` 403 | Token não tem permissão de escrita — recrie com scope `repo` (classic) ou `Contents: R/W` (fine-grained) |
+| `git push` 403 com fine-grained PAT | Além de `Contents: Read and write`, verifique em "Repository access" que o repositório-alvo está selecionado. Fine-grained PATs exigem seleção explícita de repositório. |
+| Token Classic vs Fine-grained | **Prefira Classic PAT** com scope `repo` — é 1 clique e funciona. Fine-grained PATs exigem configuração separada de "Repository access" + "Contents: Read and write". O token Classic começa com `ghp_`, o fine-grained com `github_pat_`. |
+| GITHUB_TOKEN não encontrado | Adicione `GITHUB_TOKEN=seu_token` em `/opt/data/.env` |
+| Token expirado | Renove em https://github.com/settings/tokens. Classic PATs expiram em 90 dias por padrão. |
 | "nada a commitar" | Normal — nenhuma mudança desde o último backup |
-| Repo não existe | Verifique que o repo `Flux-Agencia` existe no GitHub |
+| Repo não existe | Verifique que o repo de backup existe no GitHub |
 | HOME path mismatch no Docker | O script já usa token-in-URL (`git remote set-url origin https://user:token@...`) para evitar problemas com credential store em containers |
 | Script não encontra `/opt/data/.env` | Cron jobs executam com `HERMES_HOME=/opt/data`. O script tenta ambos `/opt/data/.env` e `~/.hermes/.env` como fallback |
 | Histórico muito grande (sessions) | Sessions NUNCA vão pro backup — o `.gitignore` bloqueia `sessions/` e `*.jsonl` |
 
 ## Suporte
 
-- **Script de backup**: `scripts/backup.py` — copiar para `~/.hermes/scripts/hermes-backup.py` para uso com cron `no_agent=true`
-- **Template .gitignore**: `templates/.gitignore` — usar como base ao configurar novo repo de backup
-- **Diagnóstico de token**: skill `github-auth` → `references/fine-grained-pat-triage.md`
+- **Pesquisa de skills nos marketplaces**: `references/skills-marketplace-research.md` — catálogo dos melhores repos de skills de marketing e design encontrados no clawhub.ai, skills.sh e GitHub (pesquisa 2026-05-10). Lista skills instaladas e recomendadas para a Agência Flux.
+- **Script de backup**: `scripts/backup.py` — script completo. Copiar para `~/.hermes/scripts/hermes-backup.py` para uso com cron `no_agent=true`. IMPORTANTE: o script lê `GITHUB_TOKEN` de `/opt/data/.env` (HERMES_HOME), não de `~/.hermes/.env`.
+- **Template .gitignore**: `templates/.gitignore` — usar como base ao configurar novo repo de backup. Já exclui .env, tokens, sessions, logs, cache.
+- **Diagnóstico de token 403**: skill `github-auth` → `references/fine-grained-pat-triage.md` — evidência concreta da sessão onde fine-grained PAT falhou e Classic PAT resolveu.

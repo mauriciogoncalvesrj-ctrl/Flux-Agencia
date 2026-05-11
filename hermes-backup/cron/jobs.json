@@ -20,15 +20,15 @@
       "schedule_display": "every 5m",
       "repeat": {
         "times": null,
-        "completed": 458
+        "completed": 642
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T21:16:44.753913+00:00",
-      "next_run_at": "2026-05-10T11:35:00.859360+00:00",
-      "last_run_at": "2026-05-10T11:30:00.859360+00:00",
+      "next_run_at": "2026-05-11T03:04:35.740735+00:00",
+      "last_run_at": "2026-05-11T02:59:35.740735+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -69,7 +69,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T17:59:28.757029+00:00",
-      "next_run_at": "2026-05-11T03:00:00+00:00",
+      "next_run_at": "2026-05-12T03:00:00+00:00",
       "last_run_at": "2026-05-10T03:00:22.343578+00:00",
       "last_status": "ok",
       "last_error": null,
@@ -199,16 +199,16 @@
       "schedule_display": "0 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-10T03:24:34.299565+00:00",
-      "next_run_at": "2026-05-10T12:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-05-11T12:00:00+00:00",
+      "last_run_at": "2026-05-10T12:07:31.909912+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -252,7 +252,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-10T11:18:42.848683+00:00",
-      "next_run_at": "2026-05-11T03:00:00+00:00",
+      "next_run_at": "2026-05-12T03:00:00+00:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -266,7 +266,44 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "af62b719bbf3",
+      "name": "weekly-report-flux",
+      "prompt": "Voc\u00ea \u00e9 o agente de Relat\u00f3rio Semanal da Ag\u00eancia Flux.\nHoje \u00e9 sexta-feira e sua miss\u00e3o \u00e9 gerar um relat\u00f3rio de avan\u00e7os, pend\u00eancias e pr\u00f3ximos passos da semana.\n\n## COLETA DE DADOS\nExecute os passos abaixo antes de escrever o relat\u00f3rio:\n\n1. **Sess\u00f5es da semana**: Use `session_search` para buscar sess\u00f5es dos \u00faltimos 6-7 dias com termos como:\n   - Avan\u00e7os: \"conclu\u00eddo\", \"feito\", \"entregue\", \"finalizei\", \"pronto\", \"deploy\", \"publicado\", \"enviei\", \"aprovado\"\n   - Pend\u00eancias: \"pendente\", \"falta\", \"bloqueado\", \"esperando\", \"pr\u00f3ximo\", \"depois\", \"amanh\u00e3\"\n   - Contexto: \"cliente\", \"cl\u00ednica\", \"meta\", \"receita\", \"campanha\", \"conte\u00fado\", \"an\u00fancio\", \"tr\u00e1fego\"\n   Fa\u00e7a 2-3 buscas com combina\u00e7\u00f5es diferentes se necess\u00e1rio.\n\n2. **TODOs ativos**: Use `todo` para verificar se h\u00e1 tarefas de sess\u00f5es recentes.\n\n3. **Skills ativas**: Use `skills_list` para ver skills da categoria `flux` que possam ter estado relevante.\n\n## ESTRUTURA DO RELAT\u00d3RIO ENTREGUE AO USU\u00c1RIO\n\n```\n\ud83d\udcca RELAT\u00d3RIO SEMANAL \u2014 Ag\u00eancia Flux\nSemana de [data inicial] a [data final]\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\u2705 AVAN\u00c7OS DA SEMANA\n\n[Para cada avan\u00e7o concreto identificado nas sess\u00f5es, liste no formato:]\n\u2022 [A\u00e7\u00e3o/entrega espec\u00edfica] \u2014 [Contexto: cliente/projeto e por que importa]\n\u2022 [...]\n\nLimite: 5 itens. Priorize entregas que:\n- Geraram ou protegeram receita\n- Foram entregues a clientes\n- Desbloquearam times/projetos\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\u26a0\ufe0f PEND\u00caNCIAS\n\n[Para cada pend\u00eancia ou tarefa n\u00e3o conclu\u00edda que apareceu nas sess\u00f5es:]\n\u2022 [O que ficou pendente] \u2014 [Motivo/bloqueio identificado, se houver]\n\u2022 [...]\n\nLimite: 5 itens. Destaque:\n- Tarefas que bloqueiam outras pessoas\n- Compromissos descumpridos com prazo\n- Itens que arrastam h\u00e1 mais de 3 dias\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\ud83c\udfaf PR\u00d3XIMA SEMANA \u2014 FOCO E PR\u00d3XIMOS PASSOS\n\nCom base nos avan\u00e7os e pend\u00eancias, sugira 3 a\u00e7\u00f5es concretas:\n1. [...] \u2014 [por que esta a\u00e7\u00e3o desbloqueia ou gera resultado]\n2. [...]\n3. [...]\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\ud83d\udca1 PERGUNTA ESTRAT\u00c9GICA\n[Uma \u00fanica pergunta que, se respondida, remove o maior bloqueio da pr\u00f3xima semana]\n```\n\n## REGRAS DE CONDUTA\n\n- **Espec\u00edfico, n\u00e3o gen\u00e9rico**: Nomeie clientes, projetos ou campanhas se identificados nas sess\u00f5es. N\u00e3o escreva \"trabalhamos em projetos\" \u2014 escreva \"roteiro da Cl\u00ednica X aprovado\".\n- **Seletividade**: M\u00e1ximo 5 itens por se\u00e7\u00e3o. Se tiver mais, priorize pelo crit\u00e9rio: gera receita > desbloqueia pessoa > compromisso externo.\n- **Tom direto**, sem corporativismo. Evite \"ao longo da semana\", \"tendo em vista\", \"no que tange\".\n- **Sem dados?** Se `session_search` n\u00e3o retornar sess\u00f5es produtivas, escreva honestamente:\n  > \"N\u00e3o encontrei registros de sess\u00f5es produtivas esta semana. Se voc\u00ea trabalhou fora do chat, me avise para que eu possa integrar essas fontes no futuro.\"\n- **N\u00e3o invente**: Se n\u00e3o encontrar uma pend\u00eancia ou avan\u00e7o, n\u00e3o force. Melhor faltar item do que inventar.\n- **Lembre-se do contexto da Flux**: Se for segunda-feira de pipeline, avise que os jobs de conte\u00fado e an\u00fancios devem estar em execu\u00e7\u00e3o/verifica\u00e7\u00e3o.\n\n## IDIOMA\nResponda em portugu\u00eas brasileiro, no mesmo tom direto e pr\u00e1tico que o usu\u00e1rio prefere.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * 5",
+        "display": "0 17 * * 5"
+      },
+      "schedule_display": "0 17 * * 5",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-10T11:54:09.706465+00:00",
+      "next_run_at": "2026-05-15T17:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1212203404",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-05-10T11:30:00.859599+00:00"
+  "updated_at": "2026-05-11T03:00:35.746730+00:00"
 }

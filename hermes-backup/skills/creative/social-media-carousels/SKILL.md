@@ -17,7 +17,30 @@ Generate professional carousel slides for Instagram, TikTok, LinkedIn, and other
 
 ## Workflow
 
-### 1. Analyze References (if images provided)
+### 🚀 Method 1: Complete Slide via Fal.ai (RECOMMENDED)
+
+**When the user wants a finished carousel slide with image AND text together**, use the built-in `image_generate` tool. It produces PNG directly — Telegram will display it natively. No SVG conversion needed.
+
+```python
+# Generates a complete slide with integrated text typography
+image_generate(
+    prompt="Instagram carousel slide for [brand]. The image must include BOTH a photograph AND text typography as one complete designed ad creative. Layout: [describe image area] + [describe text area with fonts, colors, positioning].",
+    aspect_ratio="portrait"  # Instagram 4:5
+)
+```
+
+**Key prompt ingredients for complete slides:**
+- Explicitly say "include BOTH a photograph AND text typography as one complete designed ad creative"
+- Describe the layout zones (upper/lower or left/right)
+- Specify the exact text: headline, subheadline, tagline, brand name
+- Mention colors for text (gold, white, etc.)
+- Request "magazine-quality" or "luxury brand" style
+
+**This is the PREFERRED method.** The user wants finished ad creatives, not bare images.
+
+### 🛠️ Method 2: SVG Composite (Fallback)
+
+When Fal.ai generation is insufficient or you need pixel-perfect typography control, use the SVG approach:
 
 When the user sends reference images, **do not ask for verbal descriptions**. Analyze them immediately:
 
@@ -179,6 +202,8 @@ The container lacks rasterization tools. Instruct the user:
 ## Pitfalls
 
 - **Do NOT ask for verbal feedback** if user keeps sending images — they communicate visually
+- **Do NOT deliver bare images with no text** when the user asked for a carousel — they want complete ad creatives with typography integrated
+- **SVG files sent via Telegram appear as documents, not rendered images** — prefer `image_generate` for PNG delivery
 - **Do NOT use PIL** — not installed in Hermes container; use pure SVG
 - **Do NOT use wkhtmltoimage/chromium** — not available in container
 - **Do NOT send >3–4 images per vision call** — will timeout
@@ -186,8 +211,11 @@ The container lacks rasterization tools. Instruct the user:
 - **Use `/v1/chat/completions`** not `/api/chat` for Ollama Cloud vision
 - **Wrap long titles** — Instagram carousels need readable line breaks
 - **Test SVG validity** — open in Chrome before delivering
+- **Fal.ai models have DIFFERENT valid `image_size` values** — see `references/fal-ai-model-sizes.md`. Using wrong size = wasted attempts.
+- **GPT Image 2 times out often** (120s+) via Fal.ai MCP — use `image_generate` tool as primary path
 
 ## References
 
 - `templates/carousel-svg-template.py` — Complete Python template for batch generation
 - `references/instagram-design-system.md` — Extended design system with color variations
+- `references/fal-ai-model-sizes.md` — Valid image_size values per model (avoid wrong-size errors)

@@ -1,4 +1,4 @@
-User is Brazilian Portuguese speaker with limited technical knowledge. Prefers simple, direct explanations without jargon. Uses Hostinger VPS managed panel heavily, including the "Atualizar" button. Expects expert recommendations with pros/cons/reasoning when making decisions — does not want to be told just 'do X' without understanding why. When proposing solutions, prioritize simplicity, explain practical relevance, and avoid assuming Docker/YAML knowledge.
+For design tasks, communicates via batches of reference images — not verbal descriptions. Prefers receiving versions and iterating silently. Wants COMPLETE deliverables (ad creatives with text+image together), not bare images or component pieces. When asked for a carousel slide, deliver a finished ad creative with integrated typography, not just a background photo.
 §
 O usuário quer que eu sempre identifique o modelo e provider que estou usando no INÍCIO de cada resposta, no formato: ⚡ usando deepseek-v4-pro (ollama-cloud) seguido de uma linha ────────────────────────── separando da resposta propriamente dita. Se o modelo mudar (ex: modelo de visão auxiliar), devo indicar o modelo correto.
 §

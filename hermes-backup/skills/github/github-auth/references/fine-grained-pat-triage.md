@@ -1,64 +1,64 @@
-# GitHub PAT: Classic vs Fine-Grained
+# Fine-Grained PAT Triage — Evidência da Sessão
 
-Reference for diagnosing "git push 403" with `github_pat_*` tokens.
+## Problema
 
-## Quick Identification
+Usuário criou token `github_pat_11BWI...` (fine-grained PAT).
+As chamadas `git push` e `PUT /repos/:owner/:repo/contents/:path` retornavam HTTP 403:
 
-| Prefix | Type | Default write? |
-|--------|------|----------------|
-| `ghp_*` | Classic PAT | Yes (with `repo` scope) |
-| `github_pat_*` | Fine-grained PAT | **NO** (must explicitly grant per permission) |
-
-## Fine-Grained PAT Triage
-
-When a user provides a `github_pat_*` token and `git push` returns 403:
-
-### Step 1: Check if token can read
-```bash
-curl -s -H "Authorization: Bearer $TOKEN" https://api.github.com/user
-# Should return user JSON
+```json
+{"message":"Resource not accessible by personal access token","status":"403"}
 ```
 
-### Step 2: Check repo permissions from API
+## Diagnóstico
+
+### Passo 1: Verificar token scopes
 ```bash
-curl -s -H "Authorization: Bearer $TOKEN" \
-  "https://api.github.com/repos/$OWNER/$REPO" | python3 -c "import sys,json; print(json.dumps(json.load(sys.stdin).get('permissions',{}), indent=2))"
+curl -sI -H "Authorization: Bearer $TOKEN" https://api.github.com/user | grep X-OAuth-Scopes
+# Resultado: X-OAuth-Scopes: none
+```
+Fine-grained PATs NÃO usam OAuth scopes — o header vem vazio. Isso é normal.
+
+### Passo 2: Verificar permissões do repo
+```python
+GET /repos/mauriciogoncalvesrj-ctrl/Flux-Agencia
+# Response:
+{
+  "permissions": {
+    "admin": true,
+    "maintain": true,
+    "push": true,    # ← ISSO É AS PERMISSÕES DO USUÁRIO, NÃO DO TOKEN!
+    "triage": true,
+    "pull": true
+  }
+}
 ```
 
-If `push: true` appears but push still fails → token has metadata permission but not **Contents: Write**. The `permissions` object reflects user permissions, not token permissions.
+**ARMADILHA**: O objeto `permissions` na resposta da API reflete as permissões do **usuário autenticado**, não do **token**. Um fine-grained PAT pode ter menos permissões que o usuário.
 
-### Step 3: Test write via API
-```bash
-# Try creating a file via the Contents API
-curl -s -X PUT \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/json" \
-  "https://api.github.com/repos/$OWNER/$REPO/contents/test.txt" \
-  -d '{"message":"test","content":"dGVzdA=="}'
+### Passo 3: Testar escrita real
+```python
+PUT /repos/mauriciogoncalvesrj-ctrl/Flux-Agencia/contents/README.md
+# Response: HTTP 403 "Resource not accessible by personal access token"
 ```
 
-HTTP 403 "Resource not accessible by personal access token" → token lacks **Contents: Read and write**.
+## Causa raiz
 
-### Fix for user
-Direct them to: https://github.com/settings/tokens?type=beta
-1. Click the token
-2. Under "Repository permissions" → find "Contents"
-3. Change from "Read" to **"Read and write"**
-4. Click "Update token"
+Fine-grained PATs exigem configurar **duas coisas** separadamente:
+1. **Repository access**: selecionar quais repositórios o token pode acessar
+2. **Contents: Read and write**: permissão específica para ler E escrever arquivos
 
-No token regeneration needed — permissions are updated in-place.
+Por padrão, `Contents` vem como **Read-only**. O usuário precisa mudar manualmente.
 
-## Classic PAT Triage
+## Solução aplicada
 
-If `ghp_*` token fails:
-1. Check `X-OAuth-Scopes` header: `curl -sI -H "Authorization: Bearer $TOKEN" https://api.github.com/user | grep X-OAuth-Scopes`
-2. Must include `repo` for push access
-3. Classic PATs cannot be edited — must regenerate
+O usuário criou um **Classic PAT** (`ghp_XXwF...`) com scope `repo`.
+Funcionou imediatamente — sem precisar configurar permissões por recurso.
 
-## Container-Specific: Token in Remote URL
+## Lição
 
-When credential store (`~/.git-credentials`) doesn't work due to Docker HOME path mismatches:
-```bash
-git remote set-url origin "https://$USERNAME:$TOKEN@github.com/$OWNER/$REPO.git"
-```
-This is reliable for cron scripts and automated backups where credential files may not persist.
+**Sempre recomendar Classic PAT primeiro.** O caminho mais curto para o usuário:
+1. https://github.com/settings/tokens → Generate new token (classic)
+2. Marcar `repo` ✓
+3. Copiar token que começa com `ghp_`
+
+Só usar fine-grained se o usuário precisar de escopos muito específicos.
