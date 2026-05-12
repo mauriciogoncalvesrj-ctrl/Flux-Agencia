@@ -136,6 +136,7 @@ GITHUB_TOKEN=***
 
 - **Ollama Cloud API** usa `/api/chat` (Bearer auth) com 39 modelos. OpenClaw v2026.5.7: @atlas_fluxia_bot ativo. Modelo primário: opencode-go.
 - **Meta Ad Library** 100% bloqueado do VPS — requer VPN/proxy para scraping.
+- **Meta Ads saldo real pré-pago:** não usar `balance`/MCP como saldo disponível. Consultar Graph API com ID mantendo `act_` e extrair `funding_source_details.display_string`. Script fonte: `/opt/data/scripts/meta_ads_real_balance.py`. Saldos reais conferidos 2026-05-12: Taciana R$0,00; Luana R$203,29; Proton R$1.364,82; Alpha R$2.108,91.
 - **Usuário (Maurício/Flux)** comunica preferências visuais via batches de imagens, não descrições verbais. Para design (carrosséis, conteúdo visual), analisar imagens via vision API e produzir sem pedir feedback repetitivo.
 - **Ambiente:** Hostinger VPS (8GB RAM + 4GB swap). Domain: somosflux.com.br. HERMES_REDACT_SECRETS=false. `docker compose` N/A dentro hermes-flux — usar `docker run`.
 - **Serviços:** Hermes (3GB), OpenClaw (2GB), Paperclip (1GB, port 3100), WebUI (512MB, hub.somosflux.com.br), Traefik (256MB), Open Design (512MB, design.somosflux.com.br:7456, 111 skills).
