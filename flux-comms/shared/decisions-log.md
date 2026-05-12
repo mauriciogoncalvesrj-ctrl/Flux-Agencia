@@ -6,6 +6,13 @@
 
 | Decisão | Detalhe |
 |---------|---------|
+| **Implementação da análise do Hermes** | Executadas as 5 frentes prioritárias da análise de gaps vs `coreyhaines31/marketingskills` |
+| **product-marketing-context por cliente** | Criados templates `.agents/contexts/{taciana,luana,proton,alpha}/product-marketing-context.md`. Aguardando preenchimento do Mauricio |
+| **TOOLS-REGISTRY.md criado** | Catálogo unificado de todas as ferramentas/MCPs/scripts/CLIs da Flux |
+| **VERSIONS.md criado** | Tracking de versão de skills e infraestrutura |
+| **status-flux.md criado** | Estado atual da operação, pendências, clientes, metas |
+| **skill-template.md criado** | Template padronizado para skills Flux (baseado no padrão Corey Haines, adaptado PT-BR) |
+| **6 novas skills instaladas** | customer-research, competitor-profiling, directory-submissions, community-marketing, image, video — do repo `coreyhaines31/marketingskills` |
 | **Substituição do Hermes Agent por Atlas** | O agente VPS mudou de Hermes Agent (Nous Research) para Atlas (OpenClaw). Motivo: reestruturação da operação. Backup completo preservado em `hermes-backup/` |
 | **Instalação de skills ClawHub** | gog, agent-browser, github, skillscan, skill-creator instalados para expandir capacidade da VPS |
 | **flux-comms mantido** | Protocolo de comunicação com Claude Code preservado. Atlas assume o outbox `from-hermes/` |
