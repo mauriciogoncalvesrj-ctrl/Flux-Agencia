@@ -1,5 +1,6 @@
 # Hermes Agent Backup - Somos Flux
 # Backup automático diário da configuração do agente
+# Use como base ao configurar novo repo de backup
 
 # SEGREDOS - NUNCA commitar
 .env

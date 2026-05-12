@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1a1a2e;background:#fff;padding:0}
+
+/* === CUSTOMIZE: Change gradient colors per client brand === */
+/* Alpha: #0f0c29,#302b63,#24243e / accent: #667eea,#f093fb */
+/* Proton PROMO: #1a0a00,#8b4513,#d2691e / accent: #f97316,#fbbf24 */
+/* Proton Advantage: #0c1a0a,#2d6a1e,#4ade80 / accent: #4ade80,#a3e635 */
+
+.cover{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#fff;padding:60px 40px 50px;text-align:center;page-break-after:always}
+.cover .logo{font-size:14px;letter-spacing:4px;text-transform:uppercase;opacity:.7;margin-bottom:30px}
+.cover h1{font-size:42px;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#667eea,#f093fb);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cover .subtitle{font-size:18px;opacity:.8;font-weight:300;margin-bottom:8px}
+.cover .conjunto{font-size:15px;opacity:.9;font-weight:500;background:rgba(255,255,255,.1);display:inline-block;padding:6px 20px;border-radius:20px;margin-bottom:40px}
+.cover .meta{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.cover .meta-item{text-align:center}
+.cover .meta-value{font-size:28px;font-weight:700}
+.cover .meta-label{font-size:11px;opacity:.6;text-transform:uppercase;letter-spacing:2px;margin-top:4px}
+.cover .divider{width:60px;height:3px;background:linear-gradient(90deg,#667eea,#f093fb);margin:30px auto;border-radius:2px}
+
+.page{padding:35px 40px}
+
+h2{font-size:22px;font-weight:700;color:#1a1a2e;margin-bottom:25px;padding-bottom:12px;border-bottom:2px solid #f0f0f5}
+h3{font-size:15px;font-weight:600;color:#302b63;margin:30px 0 15px}
+
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:30px}
+.metric-card{background:#f8f9ff;border-radius:12px;padding:18px 16px;border:1px solid #e8ecff;transition:transform .2s}
+.metric-value{font-size:26px;font-weight:700;color:#302b63;line-height:1.2}
+.metric-value.small{font-size:20px}
+.metric-label{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.8px;margin-top:4px}
+
+table{width:100%;border-collapse:collapse;margin:16px 0 24px}
+th{background:linear-gradient(135deg,#0f0c29,#302b63);color:#fff;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:12px 14px;text-align:left}
+td{padding:14px;border-bottom:1px solid #f0f0f5;font-size:14px}
+tr:nth-child(even) td{background:#fafbff}
+.rank-badge{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.rank-1{background:#ffd700;color:#7c6800;padding:4px 10px;border-radius:20px;font-size:13px}
+.rank-2{background:#c0c0c0;color:#4a4a4a;padding:4px 10px;border-radius:20px;font-size:13px}
+.rank-3{background:#cd7f32;color:#5c3000;padding:4px 10px;border-radius:20px;font-size:13px}
+.rank-other{color:#6b7280;font-size:13px}
+.link-icon{color:#667eea;text-decoration:none;font-size:13px}
+
+.insight-box{background:linear-gradient(135deg,#667eea15,#f093fb10);border-left:4px solid #667eea;padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0;font-size:13px;color:#4a4a6a;line-height:1.7}
+
+.footer{background:#f8f9ff;padding:20px 40px;border-top:1px solid #e8ecff;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9ca3af}
+.footer .brand{display:flex;align-items:center;gap:8px}
+.footer .brand strong{color:#302b63;font-size:13px}
+
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<!-- CUSTOMIZE: Replace CLIENT_NAME, dates, metrics, and rankings -->
+<div class="cover">
+  <div class="logo">⚡ Flux Agência</div>
+  <h1>CLIENT_NAME</h1>
+  <div class="subtitle">Relatório de Performance — Meta Ads</div>
+  <!-- Uncomment for Proton/other multi-conjunto accounts:
+  <div class="conjunto">Conjunto: CONJUNTO_NAME</div>
+  -->
+  <div class="divider"></div>
+  <div class="meta">
+    <div class="meta-item">
+      <div class="meta-value">DD – DD Mês AAAA</div>
+      <div class="meta-label">Período</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-value">R$ XXX</div>
+      <div class="meta-label">Investido</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-value">XX</div>
+      <div class="meta-label">Mensagens</div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <h2>📊 Visão Geral da Conta</h2>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-value">XX.XXX</div>
+      <div class="metric-label">Impressões</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">XX.XXX</div>
+      <div class="metric-label">Alcance</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value small">X,XX%</div>
+      <div class="metric-label">Taxa de Interação</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">XXX</div>
+      <div class="metric-label">Cliques</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">XX</div>
+      <div class="metric-label">Mensagens</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value small">R$ X,XX</div>
+      <div class="metric-label">Custo por Mensagem</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    💡 <strong>Destaque:</strong> [Insight principal do período]
+  </div>
+
+  <h2>🏆 Ranking TOP 5 Criativos</h2>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Criativo</th><th>Mensagens</th><th>CPA</th><th>CTR</th><th>Instagram</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank-badge rank-1">🏆 1º</span></td>
+        <td><strong>AD_NAME</strong></td>
+        <td><strong>XX</strong></td>
+        <td>R$ X,XX</td>
+        <td>X,XX%</td>
+        <td><a class="link-icon" href="URL">Ver post →</a></td>
+      </tr>
+      <!-- Add more rows -->
+    </tbody>
+  </table>
+
+  <h3>📈 Análise de Performance</h3>
+
+  <div class="insight-box">
+    <strong>Recomendações para a próxima semana:</strong><br>
+    • Bullet point 1<br>
+    • Bullet point 2<br>
+    • Bullet point 3
+  </div>
+</div>
+
+<div class="footer">
+  <div class="brand"><strong>Flux Agência</strong> • somosflux.com.br</div>
+  <div>Gerado por Hermes Agent • DD/MM/AAAA</div>
+</div>
+
+</body>
+</html>

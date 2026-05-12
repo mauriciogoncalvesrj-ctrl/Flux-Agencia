@@ -331,6 +331,29 @@ When querying `GET /api/agents/:id?companyId=X`, you **must** use the full 36-ch
 
 **Safe pattern:** Always extract the full `id` from the list endpoint response before querying individual agents. Never substring it.
 
+### 401 pattern: `/api/` prefix returns 401 but non-`/api/` returns 200
+
+When logs show a steady stream of 401s on `/api/companies/:id/issues?assigneeAgentId=...` (with `/api/` prefix) but the same endpoint WITHOUT `/api/` (e.g., `/companies/:id/issues` at the root) returns 200, the 401 is **NOT** a general origin/auth misconfiguration.
+
+**Root cause:** An external integration or scheduled heartbeat is calling the Paperclip REST API with an invalid, expired, or mismatched session token. The `/api/` prefix enforces authentication and origin validation; root-level paths serve HTML/SPA and have less strict checks.
+
+**Symptoms:**
+- 401s appear at regular intervals (e.g., every 5 minutes) → strongly suggests a cron/job/heartbeat
+- Only `/api/` prefixed paths fail; root-level paths succeed
+- Response body is small (~24 bytes)
+- The requesting IP is internal (e.g., `172.18.0.1` — Docker bridge)
+
+**To identify the source:**
+1. Check Traefik or Paperclip logs for the full request path and query params — the `assigneeAgentId` reveals which agent is triggering the call.
+2. Check if that agent's heartbeat/timer is configured with a valid Paperclip session/API key.
+3. Verify that OpenClaw (or any other integration) has up-to-date Paperclip credentials.
+4. Check if `PAPERCLIP_PUBLIC_URL` on the Paperclip container matches the URL the integration is using. If they differ, Better Auth rejects the session token.
+
+**Fix priority:**
+1. Recreate the integration's auth token with the correct `PAPERCLIP_PUBLIC_URL`
+2. Or temporarily bypass origin validation (see "Bypassing Origin Check" section above) while credentials are rotated
+3. Or update the integration's config to use the current Paperclip origin
+
 ### Common Agent Errors
 
 **`status: "error"` with `lastRunStatus: "failed"` and `error: "Adapter failed"`:**

@@ -20,15 +20,15 @@
       "schedule_display": "every 5m",
       "repeat": {
         "times": null,
-        "completed": 458
+        "completed": 924
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T21:16:44.753913+00:00",
-      "next_run_at": "2026-05-10T11:35:00.859360+00:00",
-      "last_run_at": "2026-05-10T11:30:00.859360+00:00",
+      "next_run_at": "2026-05-12T03:04:14.038039+00:00",
+      "last_run_at": "2026-05-12T02:59:14.038039+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -62,15 +62,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T17:59:28.757029+00:00",
-      "next_run_at": "2026-05-11T03:00:00+00:00",
-      "last_run_at": "2026-05-10T03:00:22.343578+00:00",
+      "next_run_at": "2026-05-13T03:00:00+00:00",
+      "last_run_at": "2026-05-11T03:00:36.259591+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -89,7 +89,7 @@
     {
       "id": "1e7a00249756",
       "name": "flux-conteudo-semanal",
-      "prompt": "Voc\u00ea \u00e9 o Agente de Conte\u00fado da Ag\u00eancia Flux. Gere o calend\u00e1rio editorial semanal para a cl\u00ednica de est\u00e9tica.\n\nUse a skill flux-agencia-conteudo para produzir:\n\n1. Calend\u00e1rio editorial completo (SEG a DOM)\n2. Para cada dia: tipo de pe\u00e7a, pilar de conte\u00fado, t\u00edtulo, legenda completa, hashtags, CTA\n3. 2 Reels com roteiro completo\n4. 2 Posts Carrossel com estrutura de 5 slides (gerar SVGs se poss\u00edvel)\n\nContexto padr\u00e3o (ajuste se o usu\u00e1rio j\u00e1 tiver fornecido):\n- Cl\u00ednica de est\u00e9tica\n- P\u00fablico: mulheres 25-55 anos, classe A/B\n- Canais: Instagram + Meta Ads\n- Pilares: Educa\u00e7\u00e3o 40%, Prova Social 30%, Autoridade 20%, Venda Sutil 10%\n\nFormato: listas e key:value (sem tabelas pipe, Telegram n\u00e3o suporta)\n\nEntregue tudo pronto para revisar e publicar.",
+      "prompt": "Voc\u00ea \u00e9 o Agente de Conte\u00fado da Ag\u00eancia Flux. Gere o calend\u00e1rio editorial semanal para o INSTAGRAM DA PR\u00d3PRIA AG\u00caNCIA (@somosflux) \u2014 conte\u00fado B2B para ATRAIR DONAS DE CL\u00cdNICAS DE EST\u00c9TICA.\n\nN\u00c3O gere conte\u00fado para cl\u00ednicas (B2C). O p\u00fablico-alvo \u00e9: propriet\u00e1rias de cl\u00ednicas de est\u00e9tica, m\u00e9dicas dermatologistas, fisioterapeutas dermato-funcionais, donas de centros de beleza que precisam de ag\u00eancia de marketing.\n\nPilares: 40% Autoridade (cases, m\u00e9tricas, bastidores), 30% Dor & Empatia (dores de quem gerencia cl\u00ednica), 20% Educa\u00e7\u00e3o B2C (funil, ROI, automa\u00e7\u00e3o), 10% Convers\u00e3o (diagn\u00f3stico gratuito, CTA WhatsApp).\n\nPara cada dia da semana, gere:\n1. Formato (carrossel/reel/post/stories)\n2. Tema espec\u00edfico com copy completa\n3. Legenda pronta com hashtags\n4. CTA claro\n\nGere tamb\u00e9m pelo menos 1 carrossel completo em SVG (1080\u00d71350px, fundo preto #000, destaques dourados #D4AF37, texto branco) e empacote em .tar.gz.",
       "skills": [
         "flux-agencia-conteudo",
         "flux-agencia-pipeline"
@@ -109,16 +109,16 @@
       "schedule_display": "0 9 * * 1",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T18:09:08.023254+00:00",
-      "next_run_at": "2026-05-11T09:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-05-18T09:00:00+00:00",
+      "last_run_at": "2026-05-11T09:08:51.191323+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram",
@@ -155,17 +155,17 @@
       "schedule_display": "30 9 * * 1",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T18:09:30.123289+00:00",
-      "next_run_at": "2026-05-11T09:30:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-05-18T09:30:00+00:00",
+      "last_run_at": "2026-05-11T09:30:52.954006+00:00",
+      "last_status": "error",
+      "last_error": "Blocked: prompt contains invisible unicode U+200B (possible injection).",
       "last_delivery_error": null,
       "deliver": "telegram",
       "origin": {
@@ -199,16 +199,16 @@
       "schedule_display": "0 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-10T03:24:34.299565+00:00",
-      "next_run_at": "2026-05-10T12:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-05-12T12:00:00+00:00",
+      "last_run_at": "2026-05-11T12:04:37.671804+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -245,17 +245,17 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-10T11:18:42.848683+00:00",
-      "next_run_at": "2026-05-11T03:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-05-13T03:00:00+00:00",
+      "last_run_at": "2026-05-11T03:00:39.063105+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\n[2026-05-11 03:00:35] Iniciando backup do Hermes Agent...\n  \u2705 config.yaml\n  \u2705 SOUL.md\n  \u2705 skills/ (1394 arquivos)\n  \u2705 cron/ (647 arquivos)\n  \u2705 profiles/ (4440 arquivos)\n  \u2705 memories/ (2 arquivos)\n  \u2705 scripts/ (3 arquivos)\n  \u2705 kanban/ (8 arquivos)\n  \u2705 .skills_prompt_snapshot.json\n  \u2705 plugins.json (1 plugins)\n\n[2026-05-11 03:00:35] Total: 6498 arquivos copiados\n\n\ud83d\udce6 Preparando commit...\n\u2705 Commit: [main 99efaf4] backup: 2026-05-11 03:00 - 6498 arquivos\n\u274c git push falhou:",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -266,7 +266,176 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "af62b719bbf3",
+      "name": "weekly-report-flux",
+      "prompt": "Voc\u00ea \u00e9 o agente de Relat\u00f3rio Semanal da Ag\u00eancia Flux.\nHoje \u00e9 sexta-feira e sua miss\u00e3o \u00e9 gerar um relat\u00f3rio de avan\u00e7os, pend\u00eancias e pr\u00f3ximos passos da semana.\n\n## COLETA DE DADOS\nExecute os passos abaixo antes de escrever o relat\u00f3rio:\n\n1. **Sess\u00f5es da semana**: Use `session_search` para buscar sess\u00f5es dos \u00faltimos 6-7 dias com termos como:\n   - Avan\u00e7os: \"conclu\u00eddo\", \"feito\", \"entregue\", \"finalizei\", \"pronto\", \"deploy\", \"publicado\", \"enviei\", \"aprovado\"\n   - Pend\u00eancias: \"pendente\", \"falta\", \"bloqueado\", \"esperando\", \"pr\u00f3ximo\", \"depois\", \"amanh\u00e3\"\n   - Contexto: \"cliente\", \"cl\u00ednica\", \"meta\", \"receita\", \"campanha\", \"conte\u00fado\", \"an\u00fancio\", \"tr\u00e1fego\"\n   Fa\u00e7a 2-3 buscas com combina\u00e7\u00f5es diferentes se necess\u00e1rio.\n\n2. **TODOs ativos**: Use `todo` para verificar se h\u00e1 tarefas de sess\u00f5es recentes.\n\n3. **Skills ativas**: Use `skills_list` para ver skills da categoria `flux` que possam ter estado relevante.\n\n## ESTRUTURA DO RELAT\u00d3RIO ENTREGUE AO USU\u00c1RIO\n\n```\n\ud83d\udcca RELAT\u00d3RIO SEMANAL \u2014 Ag\u00eancia Flux\nSemana de [data inicial] a [data final]\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\u2705 AVAN\u00c7OS DA SEMANA\n\n[Para cada avan\u00e7o concreto identificado nas sess\u00f5es, liste no formato:]\n\u2022 [A\u00e7\u00e3o/entrega espec\u00edfica] \u2014 [Contexto: cliente/projeto e por que importa]\n\u2022 [...]\n\nLimite: 5 itens. Priorize entregas que:\n- Geraram ou protegeram receita\n- Foram entregues a clientes\n- Desbloquearam times/projetos\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\u26a0\ufe0f PEND\u00caNCIAS\n\n[Para cada pend\u00eancia ou tarefa n\u00e3o conclu\u00edda que apareceu nas sess\u00f5es:]\n\u2022 [O que ficou pendente] \u2014 [Motivo/bloqueio identificado, se houver]\n\u2022 [...]\n\nLimite: 5 itens. Destaque:\n- Tarefas que bloqueiam outras pessoas\n- Compromissos descumpridos com prazo\n- Itens que arrastam h\u00e1 mais de 3 dias\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\ud83c\udfaf PR\u00d3XIMA SEMANA \u2014 FOCO E PR\u00d3XIMOS PASSOS\n\nCom base nos avan\u00e7os e pend\u00eancias, sugira 3 a\u00e7\u00f5es concretas:\n1. [...] \u2014 [por que esta a\u00e7\u00e3o desbloqueia ou gera resultado]\n2. [...]\n3. [...]\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\ud83d\udca1 PERGUNTA ESTRAT\u00c9GICA\n[Uma \u00fanica pergunta que, se respondida, remove o maior bloqueio da pr\u00f3xima semana]\n```\n\n## REGRAS DE CONDUTA\n\n- **Espec\u00edfico, n\u00e3o gen\u00e9rico**: Nomeie clientes, projetos ou campanhas se identificados nas sess\u00f5es. N\u00e3o escreva \"trabalhamos em projetos\" \u2014 escreva \"roteiro da Cl\u00ednica X aprovado\".\n- **Seletividade**: M\u00e1ximo 5 itens por se\u00e7\u00e3o. Se tiver mais, priorize pelo crit\u00e9rio: gera receita > desbloqueia pessoa > compromisso externo.\n- **Tom direto**, sem corporativismo. Evite \"ao longo da semana\", \"tendo em vista\", \"no que tange\".\n- **Sem dados?** Se `session_search` n\u00e3o retornar sess\u00f5es produtivas, escreva honestamente:\n  > \"N\u00e3o encontrei registros de sess\u00f5es produtivas esta semana. Se voc\u00ea trabalhou fora do chat, me avise para que eu possa integrar essas fontes no futuro.\"\n- **N\u00e3o invente**: Se n\u00e3o encontrar uma pend\u00eancia ou avan\u00e7o, n\u00e3o force. Melhor faltar item do que inventar.\n- **Lembre-se do contexto da Flux**: Se for segunda-feira de pipeline, avise que os jobs de conte\u00fado e an\u00fancios devem estar em execu\u00e7\u00e3o/verifica\u00e7\u00e3o.\n\n## IDIOMA\nResponda em portugu\u00eas brasileiro, no mesmo tom direto e pr\u00e1tico que o usu\u00e1rio prefere.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * 5",
+        "display": "0 17 * * 5"
+      },
+      "schedule_display": "0 17 * * 5",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-10T11:54:09.706465+00:00",
+      "next_run_at": "2026-05-15T17:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1212203404",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "1ca2c29ca1d8",
+      "name": "Meta Ads - Alerta Di\u00e1rio de Saldo",
+      "prompt": "Execute o flux-meta-ads-balance-alert: consulte o saldo real de todas as contas Meta Ads com an\u00fancios rodando nos \u00faltimos 7 dias.\n\nIMPORTANTE: Envie DOIS formatos de alerta:\n\n1. Primeiro, envie o RESUMO CONSOLIDADO como resposta principal, listando todas as contas ativas com saldo, gasto 7d, m\u00e9dia di\u00e1ria e dias restantes.\n\n2. Depois, para CADA conta individual com saldo cobrindo MENOS de 3 dias, envie uma mensagem SEPARADA via send_message para telegram:1212203404 com o template pronto para o cliente:\n\"\ud83d\udce2 META ADS \u2014 ALERTA DE SALDO\n\nOl\u00e1! Passando para te avisar que o saldo da conta de an\u00fancios **[NOME]** est\u00e1 em **R$ [VALOR]**, o que cobre apenas **[N] dias** de an\u00fancios.\n\nPara manter a performance e evitar pausas, o ideal \u00e9 atualizar o saldo o quanto antes.\n\nQualquer coisa, estou por aqui! \ud83d\ude0a\"\n\nO token META_ACCESS_TOKEN est\u00e1 em /opt/data/.env. Use curl na Graph API v22.0 para consultar funding_source_details (saldo real) e insights (gasto 7d).",
+      "skills": [
+        "flux-meta-ads-balance-alert"
+      ],
+      "skill": "flux-meta-ads-balance-alert",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T15:46:38.234217+00:00",
+      "next_run_at": "2026-05-12T12:00:00+00:00",
+      "last_run_at": "2026-05-11T15:55:03.426606+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1212203404",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "dec95f276e29",
+      "name": "Meta Ads - Relat\u00f3rio Semanal",
+      "prompt": "Execute o script de relat\u00f3rio semanal Meta Ads e envie os resultados.\n\n1. Rode o script: python3 /opt/data/skills/flux/flux-meta-ads-relatorio/scripts/gerar-relatorio.py --semanal\n2. Parse o JSON de sa\u00edda\n3. Para CADA conta com dados (array \"reports\"), envie uma mensagem SEPARADA via send_message para telegram:1212203404 com o conte\u00fado do campo \"report\"\n4. Formate o cabe\u00e7alho de cada mensagem come\u00e7ando com \"\ud83d\udce2 META ADS \u2014 RELAT\u00d3RIO SEMANAL\\n\ud83d\udcc5 {period}\\n\\n\" seguido do report\n5. Se nenhuma conta teve dados, envie uma mensagem: \"\ud83d\udce2 META ADS \u2014 Sem dados na \u00faltima semana\"\n\nIMPORTANTE: Cada cliente recebe seu pr\u00f3prio relat\u00f3rio individual.",
+      "skills": [
+        "flux-meta-ads-relatorio"
+      ],
+      "skill": "flux-meta-ads-relatorio",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 12 * * 1",
+        "display": "10 12 * * 1"
+      },
+      "schedule_display": "10 12 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T16:15:12.663305+00:00",
+      "next_run_at": "2026-05-18T12:10:00+00:00",
+      "last_run_at": "2026-05-11T16:21:21.135171+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1212203404",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "606f71c16a63",
+      "name": "Meta Ads - Relat\u00f3rio Mensal",
+      "prompt": "Execute o script de relat\u00f3rio mensal Meta Ads e envie os resultados.\n\n1. Rode o script: python3 /opt/data/skills/flux/flux-meta-ads-relatorio/scripts/gerar-relatorio.py --mensal\n2. Parse o JSON de sa\u00edda\n3. Para CADA conta com dados (array \"reports\"), envie uma mensagem SEPARADA via send_message para telegram:1212203404 com o conte\u00fado do campo \"report\"\n4. Formate o cabe\u00e7alho de cada mensagem come\u00e7ando com \"\ud83d\udce2 META ADS \u2014 RELAT\u00d3RIO MENSAL\\n\ud83d\udcc5 {period}\\n\\n\" seguido do report\n5. Relat\u00f3rios mensais INCLUEM saldo atual da conta \u2014 se o report j\u00e1 cont\u00e9m a linha de saldo, mantenha\n6. Se nenhuma conta teve dados, envie: \"\ud83d\udce2 META ADS \u2014 Sem dados no m\u00eas anterior\"\n\nIMPORTANTE: Cada cliente recebe seu pr\u00f3prio relat\u00f3rio individual.",
+      "skills": [
+        "flux-meta-ads-relatorio"
+      ],
+      "skill": "flux-meta-ads-relatorio",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 12 1 * *",
+        "display": "10 12 1 * *"
+      },
+      "schedule_display": "10 12 1 * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-11T16:16:13.785531+00:00",
+      "next_run_at": "2026-06-01T12:10:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1212203404",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1212203404",
+        "chat_name": "Mauricio Gon\u00e7alves Estrategista de Neg\u00f3cios",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-05-10T11:30:00.859599+00:00"
+  "updated_at": "2026-05-12T03:00:14.045736+00:00"
 }
