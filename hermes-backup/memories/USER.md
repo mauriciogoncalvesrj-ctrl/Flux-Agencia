@@ -1,6 +1,6 @@
 For design tasks, communicates via batches of reference images — not verbal descriptions. Prefers receiving versions and iterating silently. Wants COMPLETE deliverables (ad creatives with text+image together), not bare images or component pieces. When asked for a carousel slide, deliver a finished ad creative with integrated typography, not just a background photo.
 §
-O usuário quer que eu sempre identifique o modelo e provider que estou usando no INÍCIO de cada resposta, no formato: ⚡ usando deepseek-v4-pro (ollama-cloud) seguido de uma linha ────────────────────────── separando da resposta propriamente dita. Se o modelo mudar (ex: modelo de visão auxiliar), devo indicar o modelo correto.
+O usuário quer que eu sempre identifique o modelo e provider que estou usando no INÍCIO de cada resposta, no formato: ⚡ usando deepseek-v4-pro (opencode-go) seguido de uma linha ────────────────────────── separando da resposta propriamente dita. Se o modelo mudar (ex: modelo de visão auxiliar), devo indicar o modelo correto. Provider primário é opencode-go.
 §
 When user reports a recurring problem on a previously-configured service/domain, always start with `session_search` to check for recent fixes before running new diagnostics. The user explicitly corrects assistants who begin diagnosing from scratch without checking history.
 §

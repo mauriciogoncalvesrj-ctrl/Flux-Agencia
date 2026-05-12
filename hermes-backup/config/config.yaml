@@ -1,7 +1,7 @@
 model:
-  default: deepseek-v4-pro
+  default: kimi-k2.6
   base_url: ''
-  provider: opencode-go
+  provider: ollama-cloud
 providers:
   opencode-go:
     api_key: ${OPENCODE_GO_API_KEY}
@@ -11,11 +11,12 @@ fallback_providers:
   model: glm-5.1
 - provider: opencode-go
   model: kimi-k2.6
+  credential_pool_strategies: {}
 credential_pool_strategies: {}
 toolsets:
 - hermes-cli
 agent:
-  max_turns: 90
+  max_turns: 30
   gateway_timeout: 1800
   restart_drain_timeout: 180
   api_max_retries: 3
@@ -25,7 +26,7 @@ agent:
   gateway_notify_interval: 180
   gateway_auto_continue_freshness: 3600
   image_input_mode: auto
-  disabled_toolsets: []
+  disabled_toolsets: null
   reasoning_effort: high
 terminal:
   backend: local
@@ -75,11 +76,11 @@ checkpoints:
   retention_days: 7
   delete_orphans: true
   min_interval_hours: 24
-file_read_max_chars: 100000
+file_read_max_chars: 50000
 tool_output:
-  max_bytes: 50000
+  max_bytes: 15000
   max_lines: 2000
-  max_line_length: 2000
+  max_line_length: 1000
 tool_loop_guardrails:
   warnings_enabled: true
   hard_stop_enabled: false
@@ -96,7 +97,7 @@ compression:
   threshold: 0.5
   target_ratio: 0.2
   protect_last_n: 20
-  hygiene_hard_message_limit: 400
+  hygiene_hard_message_limit: 50
 prompt_caching:
   cache_ttl: 5m
 openrouter:
@@ -345,21 +346,23 @@ approvals:
   cron_mode: deny
   mcp_reload_confirm: true
 command_allowlist:
-- recursive delete
-- script execution via heredoc
-- shell command via -c/-lc flag
-- delete in root path
+- force kill processes
+- overwrite project env/config via redirection
 - script execution via -e/-c flag
 - pipe remote content to shell
-- overwrite project env/config via redirection
 - overwrite project env/config file
+- delete in root path
+- shell command via -c/-lc flag
+- script execution via heredoc
+- stop/restart hermes gateway (kills running agents)
+- recursive delete
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false
 personalities: {}
 security:
   allow_private_urls: false
-  redact_secrets: false
+  redact_secrets: true
   tirith_enabled: true
   tirith_path: tirith
   tirith_timeout: 5
@@ -424,32 +427,52 @@ mcp_servers:
     - meta-ads-mcp
     env:
       META_ACCESS_TOKEN: ${META_ACCESS_TOKEN}
+      META_APP_ID: ${META_APP_ID}
+      META_APP_SECRET: ${META_APP_SECRET}
       META_AD_ACCOUNT_ID: ${META_AD_ACCOUNT_ID}
+      META_AUTO_REFRESH: 'true'
     timeout: 120
     connect_timeout: 60
   ghl:
-    command: npx
+    command: node
     args:
-    - -y
-    - gohighlevel-mcp
+    - /opt/data/ghl-mcp/dist/server.js
     env:
       GHL_API_KEY: ${GHL_API_KEY}
-    timeout: 120
-    connect_timeout: 60
-  n8n:
-    command: npx
-    args:
-    - -y
-    - n8n-mcp-server
-    env:
-      N8N_API_URL: ${N8N_API_URL}
-      N8N_API_KEY: ${N8N_API_KEY}
+      GHL_BASE_URL: https://services.leadconnectorhq.com
+      GHL_LOCATION_ID: ${GHL_LOCATION_ID}
     timeout: 120
     connect_timeout: 60
 session_reset:
   mode: both
   idle_minutes: 1440
   at_hour: 4
+plugins:
+  enabled:
+  - disk-cleanup
+  disabled: []
+platform_toolsets:
+  cli:
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - kanban
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
+known_plugin_toolsets:
+  cli:
+  - spotify
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

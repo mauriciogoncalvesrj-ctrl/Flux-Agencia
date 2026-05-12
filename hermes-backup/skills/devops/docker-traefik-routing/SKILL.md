@@ -227,6 +227,74 @@ This is the OpenClaw-specific `lan` value meaning `0.0.0.0`. Other applications 
 
 ---
 
+## Diagnostic: Dumping All Traefik Labels Across Containers
+
+When auditing a live VPS, quickly check ALL Traefik labels in one shot:
+```bash
+docker inspect --format='{{.Name}}: {{range $k,$v := .Config.Labels}}{{$k}}={{$v}} {{end}}' \
+  $(docker ps -q) | grep "traefik\." | sed 's/ traefik\./\n  traefik./g'
+```
+
+Use this to detect:
+- **certresolver mismatches** — one container uses `certresolver=default`, another uses `certresolver=letsencrypt` — whichever Traefik doesn't have configured will fail SSL issuance silently
+- **Missing `traefik.docker.network`** — container has router/service labels but no network pointer → Traefik can't route
+- **Multiple services without explicit `service` linkage** — `Router X cannot be linked automatically with multiple Services`
+
+## Diagnostic: Verifying a Container Is Actually Listening on Its Exposed Port
+
+Port mapping in `docker ps` only means Docker published the port to the host. The **application inside** may still bind to `127.0.0.1` only, making it unreachable from Traefik (which connects via the Docker bridge `172.x.x.x`).
+
+**Check from the host:**
+```bash
+# See what Docker mapped externally
+docker port <container-name>
+```
+
+**Check from inside the container** (works even without `ss`/`netstat`):
+```bash
+# Verify the process is listening on the claimed port in hex
+docker exec <container> sh -c "cat /proc/net/tcp | grep -i $(printf '%04X' <port>)"
+# No output = the application is NOT listening on 0.0.0.0:port (likely loopback-only)
+```
+
+**Also check with /proc/*/fd:**
+```bash
+docker exec <container> sh -c "ls -la /proc/*/fd 2>/dev/null | grep -E 'socket:|\.:' | head -20"
+# Shows open socket descriptors (rough proxy for listening sockets)
+```
+
+If the port is unclaimed but the app should be running, check its own config for `bind: loopback` or `host: 127.0.0.1`.
+
+## Diagnostic: DNS Subdomain Validation
+
+Before declaring a Traefik route broken, confirm the subdomain actually resolves. If DNS is missing, Let's Encrypt will fail with `NXDOMAIN` (visible in Traefik logs) and the route will never serve HTTPS.
+
+```bash
+for sub in design hub paperclip openclaw camofox; do
+  echo -n "$sub.somosflux.com.br: "
+  curl -sI --connect-timeout 3 "https://$sub.somosflux.com.br" 2>&1 | head -1 || echo "FAIL/DNS"
+done
+```
+
+**If `dig` is unavailable inside the container**, `curl --connect-timeout` is a universal fallback that tests both DNS resolution + HTTPS reachability. A "connection timeout" or "Could not resolve host" from curl confirms NXDOMAIN.
+
+## Diagnostic: Checking for Process Zombies (Memory Leak Indicator)
+
+When a container accumulates `<defunct>` processes, it has a child-reaping problem. This is common with Chromium/Chrome headless in Docker. The parent process (Node.js, Python, etc.) is not calling `waitpid()` on SIGCHLD, leaving zombie PIDs in the process table. These consume negligible memory individually but can exhaust PID limits and indicate deeper stability issues.
+
+```bash
+# Count zombies per container
+docker exec <container> ps aux 2>/dev/null | grep defunct | wc -l
+
+# Quick check across all running containers
+for c in $(docker ps -q); do
+  count=$(docker exec "$c" ps aux 2>/dev/null | grep -c defunct || echo 0)
+  [ "$count" -gt 0 ] && echo "$(docker inspect --format '{{.Name}}' $c): $count zombies"
+done
+```
+
+**Action threshold:** If a non-browser container (e.g., Node.js app server, Python backend) has >5 zombies, investigate. If a browser-automation container (Puppeteer, Camofox, Playwright) has >20 zombies, restart is usually the fastest fix — the zumbis will not be reaped without code changes.
+
 ## Verification
 
 After creating routes, test from outside:
