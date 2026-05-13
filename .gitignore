@@ -3,6 +3,11 @@
 # =============================================================
 .credentials.json
 mcp-needs-auth-cache.json
+**/.env
+**/.env.*
+!**/.env.example
+ad-assets/
+**/fal-output/
 
 # =============================================================
 # HISTÓRICO DE CONVERSAS (privado + potencialmente grande)

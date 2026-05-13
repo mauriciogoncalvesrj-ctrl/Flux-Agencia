@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.1-flux",
+  "brand_name": "Flux Agency",
+  "tagline": "Estrategia que atrai. Sistema que converte. Resultados que escalam.",
+  "website_url": "https://somosflux.com.br",
+  "extracted_at": "2026-05-12",
+  "market": "BR",
+  "language": "pt-BR",
+  "niche": "clinicas de estetica, harmonizacao facial, negocios locais premium",
+  "founder": {
+    "name": "Mauricio Goncalves",
+    "instagram": "@mauriciogoncalvesrj",
+    "use_in_creative": true,
+    "appearance": "homem 30-40 anos, barba grisalha, blazer/jaqueta marrom-bege ou preta, camiseta preta, brasileiro"
+  },
+  "voice": {
+    "formal_casual": 7,
+    "rational_emotional": 6,
+    "playful_serious": 9,
+    "bold_subtle": 10,
+    "traditional_innovative": 9,
+    "expert_accessible": 6,
+    "descriptors": ["agressivo direct-response", "autoritario", "provocativo", "premium-tech"],
+    "forbidden_tone": ["fofo", "pastel", "consultivo-suave", "academico", "corporativo-estatico"]
+  },
+  "copy_principles": {
+    "headline_size": "GIGANTE (50-65% da area da imagem)",
+    "headline_case": "UPPERCASE para palavras-chave de impacto",
+    "language_register": "direto, sem rodeios, verbos no imperativo (PARE, COMENTA, VAMOS)",
+    "hooks_padrao": [
+      "O RALO DE [problema]",
+      "O FIM DAS [categoria] EM [ano]",
+      "PARE DE [acao negativa]",
+      "[X] VAI QUEBRAR SUA [negocio]",
+      "MAIS DE [N] CLINICAS ACELERADAS",
+      "O QUE [agencias/concorrentes] ESCONDEM DE VOCE"
+    ],
+    "cta_patterns": [
+      "Comenta \"[PALAVRA]\" e eu te mostro como [beneficio]",
+      "Vamos conversar? O primeiro passo e seu.",
+      "Clique no link da bio e agende agora.",
+      "Vamos jogar o jogo grande?"
+    ]
+  },
+  "colors": {
+    "primary_palette": {
+      "deep_black": "#0A0A0A",
+      "rich_black": "#000000",
+      "gold_premium": "#C9A961",
+      "gold_metallic": "#D4AF37",
+      "cream_text": "#E8DCC4",
+      "white_pure": "#FFFFFF"
+    },
+    "accent_cyber": {
+      "deep_navy": "#0A1428",
+      "electric_cyan": "#00D4FF",
+      "blue_glow": "#1E90FF",
+      "neural_blue": "#4FC3F7"
+    },
+    "accent_alert": {
+      "warning_yellow": "#FFB400",
+      "neon_yellow": "#FFD700",
+      "danger_red": "#D62828",
+      "ember_orange": "#FF6B35"
+    },
+    "forbidden_colors": [
+      "rosa pastel",
+      "lilas",
+      "azul bebe",
+      "branco como fundo dominante",
+      "verde menta",
+      "amarelo claro de pacote consumer"
+    ]
+  },
+  "typography": {
+    "heading_font": "Anton / Bebas Neue / Oswald (sans-serif condensada bold uppercase)",
+    "body_font": "Inter / Montserrat (sans-serif media-bold)",
+    "accent_font": "italico script dourado para frases curtas tipo 'Velocidade e lucro' (uso pontual)",
+    "pairing_descriptor": "condensada bold uppercase para headline + sans regular para body + script dourado raro para emocao",
+    "size_hierarchy": "headline 80-120pt | subhead 30-40pt | body 18-22pt | micro 12-14pt"
+  },
+  "imagery": {
+    "style": "mixed: typography-first design + 3D render dramatico + foto de produto/pessoa com tratamento dark",
+    "subjects": [
+      "objetos simbolicos em close-up (cadeado, balde furado, ralo, dinheiro caindo, ampulheta, celular)",
+      "ambiente quebrado/em chamas com fagulhas",
+      "infografico 3D (funil, graficos, dashboards)",
+      "Mauricio em foto estudio com fundo preto + circuito neural"
+    ],
+    "composition": "headline ocupa 50-65% da imagem | numero de pagina top-right (1/7, 5/10) | elemento visual a direita ou em background tratado | rodape com micro-CTA + chevron",
+    "lighting": "low-key dramatico, rim light dourado ou cyan, contraste alto, sombras profundas",
+    "texture": "concreto rachado, metal arranhado, fogo/fagulhas, particulas brilhantes, grids de circuito",
+    "forbidden_imagery": [
+      "stock photo de equipe sorrindo",
+      "fundo branco corporativo",
+      "ilustracao flat estilo SaaS",
+      "mockup de laptop limpo apple-style",
+      "imagens consumer-lifestyle bem iluminadas"
+    ]
+  },
+  "aesthetic": {
+    "mood_keywords": ["dramatico", "premium-luxo", "urgencia", "autoridade", "cyber-tech", "alerta-perigo"],
+    "texture": "textured-cinematic",
+    "negative_space": "moderate (texto domina, fundo escuro reserva contraste)",
+    "lighting_signature": "rim light dourado em headlines | glow cyan em elementos tech | fagulhas/embers em alertas"
+  },
+  "sub_styles": {
+    "A_cyber_tech": {
+      "when_to_use": "Hooks sobre IA, futuro, dados, transformacao tecnologica, raio-x analitico",
+      "palette": ["#0A1428", "#00D4FF", "#1E90FF", "#FFFFFF"],
+      "elements": "HUD interfaces, holograma humano, circuitos, particulas azuis, dashboards futuristas",
+      "examples_from_refs": ["O FIM DAS CLINICAS COMUNS EM 2026", "A SOLUCAO (3 passos)", "RAIO-X DO LUCRO", "O TRIO DE FERRO"]
+    },
+    "B_luxo_educacional": {
+      "when_to_use": "Carrossel educacional, prova social, autoridade, listas numeradas",
+      "palette": ["#0A0A0A", "#C9A961", "#D4AF37", "#E8DCC4", "#FFFFFF"],
+      "elements": "icones line-art dourados, paginacao top-right (1/7, 5/10), tipografia bold condensada, ornamentos dourados em diagonal",
+      "examples_from_refs": ["O RALO DE DINHEIRO", "O LEAD ESFRIA EM MINUTOS", "TRAFEGO SEM FUNIL", "NOSSA SOLUCAO: FUNIL COMPLETO", "ESTRATEGIA + SISTEMA", "O QUE EU FACO POR VOCE", "MAIS DE 60 CLINICAS"]
+    },
+    "C_alerta_polemico": {
+      "when_to_use": "Hooks de medo, urgencia, denuncia, problema doloroso",
+      "palette": ["#0A0A0A", "#FFB400", "#FFD700", "#D62828", "#F5F5F5"],
+      "elements": "faixas listradas amarelo/preto em diagonal, icone triangular de alerta, fagulhas, fumaca, textura concreto rachado",
+      "examples_from_refs": ["LEAD BARATO VAI QUEBRAR SUA CLINICA", "PARE DE PERDER DINHEIRO", "O CUSTO DA NAO-ESTRATEGIA"]
+    },
+    "D_personal_brand": {
+      "when_to_use": "Autoridade pessoal Mauricio, CTA direto do fundador, branding pessoal",
+      "palette": ["#0A0A0A", "#C9A961", "#E8DCC4", "#FFFFFF"],
+      "layout": "foto do Mauricio (blazer marrom-bege ou preto, camiseta preta, barba grisalha) ocupando direita 40-50%, headline grande a esquerda, fundo preto com pattern sutil de circuito neural ou cerebro",
+      "lighting": "low-key estudio, rim light dourado, fundo escuro",
+      "examples_from_refs": ["O CEREBRO POR TRAS DA SUA ESCALA", "IA NAO E MAGICA, E METODO", "VAMOS JOGAR O JOGO GRANDE"]
+    }
+  },
+  "target_audience": {
+    "age_range": "30-55",
+    "profession": "dono(a) de clinica de estetica, harmonizacao facial, dermato, odonto estetica, negocio local premium",
+    "ticket_med_clinica": "R$3k-R$15k/procedimento",
+    "pain_points": [
+      "leads caros que nao convertem",
+      "no-show alto na agenda",
+      "agencia entrega lead sem qualificacao",
+      "processo comercial manual e furado",
+      "investe em trafego mas nao lucra"
+    ],
+    "aspirations": [
+      "agenda cheia de pacientes qualificados",
+      "escala previsivel sem depender de indicacao",
+      "sistema rodando 24/7 sem voce ser o gargalo",
+      "lucro liquido (nao faturamento bruto)"
+    ]
+  },
+  "brand_values": [
+    "metodo > ferramenta",
+    "lucro liquido > faturamento bruto",
+    "estrategia + sistema (nunca um sem o outro)",
+    "campo de batalha (60+ clinicas aceleradas, nao teoria)"
+  ],
+  "platform_formats": {
+    "instagram_feed": "1080x1350 (4:5)",
+    "instagram_carousel": "1080x1350 (4:5) com numeracao 1/N",
+    "instagram_stories": "1080x1920 (9:16)",
+    "instagram_reels_cover": "1080x1920 (9:16)",
+    "youtube_thumb": "1280x720 (16:9)"
+  },
+  "screenshots": {
+    "reference_pack": "J:/Meu Drive/#01 - AGENCIA MOTIVA DIGITAL/#07 - CLIENTES/01 - ATIVOS/01 - SOMOS FLUX/#09 - Conteudo/ABRIL/images/",
+    "homepage": null,
+    "product": null,
+    "about": null
+  }
+}
