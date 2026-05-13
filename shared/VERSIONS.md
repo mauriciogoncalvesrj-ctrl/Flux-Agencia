@@ -28,9 +28,11 @@
 | **flux-toprank-seo** | 1.0.0 | 2026-05-10 | ✅ Ativo | On-demand |
 | **flux-competitor-spy** | 1.0.0 | 2026-05-10 | ✅ Ativo | On-demand |
 | **flux-ads-audit** | 1.0.0 | 2026-05-10 | ✅ Ativo | On-demand |
-| **flux-prompt-engineer** | 1.0.0 | 2026-05-10 | ✅ Ativo | On-demand |
-| **flux-x-monitor** | 1.0.0 | 2026-05-10 | ✅ Ativo | On-demand |
+| **flux-prompt-engineer** | 2.0.0 | 2026-05-12 | ✅ Ativo | Refatorado (v1→v2) |
+| **flux-x-monitor** | 1.0.0 | 2026-05-10 | ✅ Ativo | Copiado do backup |
 | **ghl-mcp-server** | 1.0.0 | 2026-05-10 | ⚠️ Location 401 | Token fix pendente |
+| **flux-copy-estetica** | 1.0.0 | 2026-05-12 | ✅ Ativo | NOVO — adaptado do Corey Haines |
+| **flux-pesquisa-pacientes** | 1.0.0 | 2026-05-12 | ✅ Ativo | NOVO — adaptado do Corey Haines |
 
 ---
 
@@ -68,6 +70,13 @@
 - **NEW:** TOOLS-REGISTRY.md criado (catálogo unificado de ferramentas)
 - **NEW:** VERSIONS.md criado (este arquivo)
 - **NEW:** `.agents/contexts/{taciana,luana,proton,alpha}/product-marketing-context.md` — templates criados
+- **NEW:** `shared/status-flux.md` — estado atual da operação
+- **NEW:** `shared/skill-template.md` — template padronizado para skills
+- **NEW:** `shared/template-entrega-semanal.md` — template de relatório semanal
+- **NEW:** 9 skills Flux refatoradas para template padronizado
+- **NEW:** `flux-copy-estetica` — copywriting PT-BR para estética
+- **NEW:** `flux-pesquisa-pacientes` — pesquisa de pacientes para estética
+- **NEW:** 6 skills Corey Haines instaladas (customer-research, competitor-profiling, directory-submissions, community-marketing, image, video)
 - **NEW:** Análise de gaps vs `coreyhaines31/marketingskills` concluída
 - **CHANGE:** Hermes Agent → Atlas (OpenClaw)
 
