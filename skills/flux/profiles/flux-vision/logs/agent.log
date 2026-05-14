@@ -1,0 +1,4 @@
+2026-05-14 14:38:54,337 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-14 14:38:54,338 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-14 14:38:54,338 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-14 14:38:54,527 INFO hermes_cli.plugins: Plugin discovery complete: 11 found, 7 enabled

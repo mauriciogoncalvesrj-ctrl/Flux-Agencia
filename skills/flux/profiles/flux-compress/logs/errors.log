@@ -1,0 +1,8 @@
+2026-05-14 14:46:27,231 WARNING agent.auxiliary_client: Auxiliary auto-detect: no provider available (tried: openrouter, nous, local/custom, api-key). Compression, summarization, and memory flush will not work. Set OPENROUTER_API_KEY or configure a local model in config.yaml.
+2026-05-14 14:46:27,577 ERROR [20260514_144626_70435a] root: Non-retryable client error: unauthorized
+2026-05-14 14:50:53,390 WARNING agent.auxiliary_client: Auxiliary auto-detect: no provider available (tried: openrouter, nous, local/custom, api-key). Compression, summarization, and memory flush will not work. Set OPENROUTER_API_KEY or configure a local model in config.yaml.
+2026-05-14 14:50:53,717 ERROR [20260514_145052_97761d] root: Non-retryable client error: unauthorized
+2026-05-14 14:56:43,783 WARNING agent.auxiliary_client: Auxiliary auto-detect: no provider available (tried: openrouter, nous, local/custom, api-key). Compression, summarization, and memory flush will not work. Set OPENROUTER_API_KEY or configure a local model in config.yaml.
+2026-05-14 14:56:44,104 ERROR [20260514_145643_6a2d07] root: Non-retryable client error: unauthorized
+2026-05-14 14:57:17,460 WARNING agent.auxiliary_client: Auxiliary auto-detect: no provider available (tried: openrouter, nous, local/custom, api-key). Compression, summarization, and memory flush will not work. Set OPENROUTER_API_KEY or configure a local model in config.yaml.
+2026-05-14 14:57:17,783 ERROR [20260514_145717_2010cb] root: Non-retryable client error: unauthorized

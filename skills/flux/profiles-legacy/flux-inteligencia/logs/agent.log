@@ -1,0 +1,10 @@
+2026-05-08 23:08:28,342 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-08 23:08:28,343 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-08 23:08:28,343 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-08 23:08:30,624 INFO hermes_cli.plugins: Plugin discovery complete: 11 found, 7 enabled
+2026-05-08 23:08:36,198 INFO run_agent: No .env file found. Using system environment variables.
+2026-05-08 23:09:28,435 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-05-08 23:09:28,435 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-05-08 23:09:28,442 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-05-08 23:09:30,766 INFO hermes_cli.plugins: Plugin discovery complete: 11 found, 7 enabled
+2026-05-08 23:09:36,208 INFO run_agent: No .env file found. Using system environment variables.

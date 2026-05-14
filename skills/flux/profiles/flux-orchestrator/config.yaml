@@ -1,0 +1,25 @@
+# Flux Orquestrador — Planejamento, decomposição, coordenação
+model:
+  default: kimi-k2.6
+  provider: ollama-cloud
+
+agent:
+  max_turns: 30
+  reasoning_effort: high
+  gateway_timeout: 1800
+  tool_use_enforcement: auto
+
+toolsets:
+- web
+- search
+- browser
+- file
+- delegation
+- todo
+- memory
+- skills
+- terminal
+
+skills:
+  auto_load:
+  - flux-orchestrator

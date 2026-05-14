@@ -1,0 +1,24 @@
+# Flux Creative — Copy PT-BR, ideação, carrosséis, narrativas
+model:
+  default: gemma4:31b
+  provider: ollama-cloud
+
+agent:
+  max_turns: 25
+  reasoning_effort: high
+  gateway_timeout: 1800
+  tool_use_enforcement: auto
+
+toolsets:
+- image_gen
+- vision
+- file
+- web
+- memory
+- skills
+
+skills:
+  auto_load:
+  - flux-copy-estetica
+  - flux-prompt-engineer
+  - flux-social-estetica
