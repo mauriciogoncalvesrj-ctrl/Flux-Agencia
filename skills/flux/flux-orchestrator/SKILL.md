@@ -40,6 +40,20 @@ MAURICIO → ORCHESTRATOR (você) → Especialistas → ORCHESTRATOR → Maurici
 
 **Regra de ouro:** Se uma tarefa pode ser feita por um especialista, delegue. O orquestrador só executa diretamente quando: (a) a tarefa envolve MCPs que sub-agentes não têm acesso, ou (b) é a síntese final que requer visão跨-domínio.
 
+## HARD GATE — Delegação obrigatória antes de executar
+
+Antes de qualquer ação direta em requests multi-domínio (2+ áreas) ou com múltiplas frentes independentes, o orquestrador DEVE passar por este gate:
+
+1. **Classificar domínios** explicitamente: Criativo, Meta Ads, Pesquisa, CRM/Social, DevOps.
+2. **Se houver 2+ domínios ou 2+ frentes paralelizáveis:** chamar `delegate_task(tasks=[...])` ANTES de executar a solução diretamente.
+3. **Máximo por lote:** respeitar `delegation.max_concurrent_children` (atualmente 3). Se houver 4+ subtasks, dividir em lotes.
+4. **Anunciar agentes:** informar no início quais sub-agentes serão disparados e qual tarefa cada um fará.
+5. **Exceções permitidas:** apenas (a) MCPs/side-effects que sub-agentes não acessam, (b) síntese final cross-domínio, (c) tarefa trivial de domínio único.
+6. **Se não delegar:** registrar no output final o motivo objetivo da exceção. Não basta “pensei como orquestrador”; precisa ter `delegate_task` real ou justificativa.
+7. **Transparência de modelo:** na síntese final, reportar se os sub-agentes herdaram o modelo do orquestrador ou se `delegation.model/provider/base_url` direcionou uma LLM específica.
+
+**Falha crítica:** resolver sozinho um request multi-domínio sem `delegate_task` é violação do protocolo.
+
 ---
 
 ## Before Starting — Context Loading

@@ -13,6 +13,27 @@ Pergunte: este request envolve **2 ou mais** destas áreas?
 
 **Se sim → ATIVAR ORQUESTRADOR.** Carregar `skill_view('flux-orchestrator')` imediatamente.
 
+## Passo 0.1: HARD GATE de delegação
+
+Antes de executar qualquer ação direta:
+
+```
+1. Domínios detectados: ________
+2. Frentes independentes/paralelas: ________
+3. Precisa MCP/side-effect exclusivo do orquestrador? ________
+4. delegate_task chamado? SIM/NÃO + motivo
+5. Modelo dos sub-agentes: herdado ou direcionado por delegation.*?
+```
+
+**Regra obrigatória:** se houver 2+ domínios ou 2+ frentes independentes, chamar `delegate_task(tasks=[...])` antes da solução direta. Se houver mais tarefas que `delegation.max_concurrent_children`, dividir em lotes.
+
+**Só não delegar quando:**
+- A tarefa for trivial e de domínio único;
+- A execução depender de MCP/side-effect indisponível para sub-agentes;
+- For apenas a síntese final dos outputs já delegados.
+
+No relatório final, incluir: “Delegação: feita/não feita; motivo; modelo dos sub-agentes”.
+
 ## Passo 1: Classificar (5 segundos)
 
 ```
