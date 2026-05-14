@@ -62,6 +62,8 @@ Antes de qualquer ação direta em requests multi-domínio (2+ áreas) ou com m�
 
 **Ver `references/activation-checklist.md`** para o passo-a-passo de ativação que deve ser seguido a cada request.
 
+**Ver `references/model-routing-policy.md`** antes de selecionar modelo/subagente: por enquanto a seleção automática deve usar somente Ollama Cloud e OpenCode, deixando `gpt-5.5` e outros modelos externos reservados para escolha explícita do Mauricio. O orquestrador deve reportar herança/override de modelo no final.
+
 **SEMPRE carregue o contexto do cliente primeiro.** Antes de qualquer decomposição:
 
 1. Identifique qual cliente está no request (Taciana, Alpha, Proton, Luana, ou múltiplos)
