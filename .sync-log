@@ -1,15 +1,1 @@
-[2026-05-12 22:13 UTC] sync-atlas
-- git pull: Already up to date
-- from-claude-code/: 1 arquivo (handshake, já acked)
-- from-hermes/: 2 arquivos (resposta handshake + handoff atlas, ambos commitados)
-- local changes: none
-- action: none required
-
-[2026-05-12 23:13 UTC] sync-atlas
-- git pull: Already up to date
-- from-claude-code/: 1 arquivo (handshake, ja acked)
-- from-hermes/: 2 arquivos (handshake + handoff)
-- local changes: .sync-log updated
-- action: committed and pushed
-[2026-05-13 20:13:57] Sync executado - Repositório atualizado, sem novas mensagens, sem mudanças locais
-[2026-05-13 21:14:05] Sync executado - Sem novas mensagens - Repositório atualizado
+2026-05-14 12:13 BRT | Atlas auto-sync | Status: já atualizado | Novas mensagens: 0 | Mudanças locais: nenhuma
