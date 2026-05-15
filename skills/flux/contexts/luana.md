@@ -1,49 +1,52 @@
 # Product Marketing Context — Luana
 
-*Última atualização: 2026-05-12*
-*Versão: 1.0.0 — Estrutura inicial. Preencher dados reais com o cliente.*
+*Última atualização: 2026-05-13 (dados de campanha do WhatsApp GHL)*
+*Versão: 1.1.0 — Preenchido com dados reais da conversa do grupo Motiva*
 
 ## Product Overview
 - **Nome da clínica:** Luana Sampaio Estética
-- **One-liner:** [PREENCHER — ex: "Sua beleza natural revelada com tecnologia e cuidado"]
+- **One-liner:** Beleza natural com tecnologia e cuidado personalizado
 - **Categoria:** Clínica de estética facial e corporal
 - **Tipo:** Serviços presenciais (procedimentos estéticos)
-- **Modelo de negócio:** [PREENCHER — atendimento particular / convênios / pacotes]
-- **Preços típicos:** [PREENCHER — ticket médio e faixa]
-- **Localização:** [PREENCHER — cidade/região]
+- **Modelo de negócio:** Atendimento particular + pacotes
+- **Localização:** Jundiaí/SP e região (Cajamar incluso)
 
 ## Target Audience (ICP)
-- **Gênero:** [PREENCHER — feminino/misto]
-- **Faixa etária:** [PREENCHER — ex: 25-55 anos]
-- **Classe social:** [PREENCHER — A/B/C]
-- **Perfil comportamental:** [PREENCHER — quais dores e desejos]
-- **Profissão/tipo:** [PREENCHER — executivas, donas de casa, influenciadoras?]
+- **Gênero:** Feminino (predominante)
+- **Faixa etária:** 25-55 anos
+- **Classe social:** B/C+
+- **Perfil comportamental:** Mulheres que querem resultados estéticos visíveis mas naturais, sem exagero
+- **Profissão/tipo:** Profissionais, donas de casa, mulheres que se cuidam
 
 ### Jobs to be Done
-- [PREENCHER — ex: "Quero prevenir envelhecimento sem parecer que fiz procedimento"]
-- [PREENCHER — ex: "Quero melhorar minha aparência para o trabalho"]
-- [PREENCHER — ex: "Quero tratar pele e contorno facial com segurança"]
+- "Quero resultado estético que ninguém perceba que fiz procedimento — só notam que estou mais bonita"
+- "Quero redução de medidas com resultado visível, sem cirurgia"
+- "Quero pele renovada e rejuvenescida com segurança e tecnologia"
 
-### Personas (B2C)
-| Persona | Dores | Desejos | Objeções típicas |
-|---------|-------|---------|------------------|
-| [Nome/função] | [Dor 1, Dor 2] | [Desejo 1, Desejo 2] | [Objeção 1] |
-| [Nome/função] | [Dor 1, Dor 2] | [Desejo 1, Desejo 2] | [Objeção 1] |
+## Campaign Performance (2026-05-13)
 
-## Problems & Pain Points
+| Procedimento | Status | Ação |
+|---|---|---|
+| 🔥 **CO2/Carboxiterapia** | Performando bem (Jundiaí) | Manter e duplicar com variações de copy |
+| ⚠️ **Protocolo Turbo** | Baixa conversão | Testar novo ângulo |
+| 🔄 **Corporal/Emagrecimento** | Criativo "mão com luva" parou de converter | **Urgente:** novo criativo (selfie/vídeo) |
+| 🆘 **Preenchimento Labial** | ZERO mensagens recebidas | **Urgente:** novo criativo com ângulo naturalidade |
+
+### Pain Points
 - **Dores principais dos pacientes:**
-  - [PREENCHER]
-  - [PREENCHER]
+  - Medo de resultado artificial/exagerado ("boca de pato")
+  - Insegurança com a aparência corporal
+  - Dúvida se o procedimento funciona mesmo
 - **Por que alternativas falham:**
-  - [PREENCHER — ex: "Clínicas concorrentes são impessoais, resultados artificiais"]
-  - [PREENCHER — ex: "Pacientes tentam resolver com cremes/skincare sem orientação profissional"]
-- **Custo emocional da não-solução:** [PREENCHER — vergonha, insegurança, ansiedade social?]
+  - Clínicas concorrentes entregam resultado artificial e impessoal
+  - Pacientes tentam resolver com cremes/skincare sem orientação profissional
+- **Custo emocional da não-solução:** Insegurança, vergonha do corpo, sensação de "já tentei de tudo"
 
 ## Tratamentos e Serviços
-- **Carro-chefe:** [PREENCHER — Botox, harmonização facial, skinbooster, bioestimuladores?]
-- **Procedimentos secundários:** [PREENCHER]
-- **Procedimentos de entrada (baixo ticket):** [PREENCHER]
-- **Procedimentos premium (alto ticket):** [PREENCHER]
+- **Carro-chefe (melhor performance):** CO2 / Carboxiterapia
+- **Procedimentos secundários:** Protocolo Turbo, Corporal (emagrecimento/redução de medidas)
+- **Procedimento com potencial não explorado:** Preenchimento Labial (zero conversão atual)
+- **Gatilho vencedor:** Naturalidade + Prova Social Geográfica ("Jundiaí escolheu")
 
 ## Competitive Landscape
 - **Concorrentes diretos (mesmo bairro/região):** [PREENCHER]

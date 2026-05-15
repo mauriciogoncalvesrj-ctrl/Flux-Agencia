@@ -42,20 +42,20 @@ Gather this context (ask if not provided):
 ### 1. Clareza > Criatividade
 Se tiver que escolher entre claro e criativo, escolha CLARO. A paciente precisa entender em 2 segundos.
 - ❌ "Revolucione sua autoimagem com nossa abordagem inovadora"
-- ✅ "Harmonização facial que deixa você mais bonita — sem ninguém perceber que fez"
+- ✅ "Harmonização facial com foco em equilíbrio e naturalidade — planejada para valorizar seus traços"
 
 ### 2. Benefícios > Features
 - **Feature**: Bioestimulador de colágeno Sculptra®
-- **Benefício**: Pele firme e natural, sem parecer que fez procedimento
+- **Benefício**: Estímulo progressivo de colágeno para melhorar firmeza e qualidade da pele, conforme indicação individual
 
 ### 3. Linguagem da Paciente > Jargão Médico
 Use palavras que as pacientes usam no Google e nas conversas.
 - ❌ "Estruturação do terço médio da face com ácido hialurônico reticulado"
-- ✅ "Preenchimento que acaba com o bigode chinês e levanta as maçãs do rosto"
+- ✅ "Avaliação para suavizar sulcos e valorizar o contorno facial com naturalidade"
 
 ### 4. Especificidade > Generalização
 - ❌ "Resultados incríveis em pouco tempo"
-- ✅ "Em 30 minutos, você sai daqui com o rosto que sempre quis — e em 7 dias ninguém percebe que fez nada"
+- ✅ "Plano facial personalizado para valorizar seus traços com naturalidade — tempo, indicação e evolução variam conforme avaliação"
 
 ### 5. Uma Ideia por Seção
 Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
@@ -73,11 +73,84 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 - ❌ Usar expressões como "sem dor", "sem riscos", "método milagroso"
 
 ### PERMITIDO
-- ✅ Mencionar "resultados típicos" ou "resultados esperados com o tratamento adequado"
+- ✅ Mencionar possibilidades com ressalva: "pode ajudar", "costuma", "em muitos casos", "quando indicado"
 - ✅ Usar "avaliação individualizada" e "protocolo personalizado"
 - ✅ Destacar experiência do profissional (CRM, especializações)
 - ✅ Mostrar estrutura e tecnologia da clínica
-- ✅ Compartilhar depoimentos REAIS com autorização por escrito
+- ✅ Compartilhar depoimentos REAIS com autorização por escrito e aviso de que resultados variam
+- ✅ Usar números somente se o usuário fornecer fonte verificável ou se estiverem em material oficial do cliente
+
+### Regra de Ouro
+
+Toda copy de estética deve vender com clareza, desejo e confiança, mas **sem transformar possibilidade em promessa**.
+
+**Use:**
+- "pode ajudar"
+- "costuma"
+- "em muitos casos"
+- "quando indicado"
+- "após avaliação individual"
+- "resultados variam"
+- "protocolo personalizado"
+- "profissional habilitado"
+- "produtos regularizados"
+
+**Evite:**
+- "garantido"
+- "definitivo"
+- "sem dor" / "zero dor"
+- "sem risco"
+- "sem downtime"
+- "resultado em X dias" sem ressalva
+- "o mais seguro"
+- "100% natural"
+- "ninguém vai perceber"
+- estatísticas sem fonte comprovável
+- antes/depois como prova universal
+
+### Checklist de Compliance (antes de entregar qualquer copy)
+
+- [ ] Há promessa de resultado garantido? → Reformular com "pode ajudar", "costuma", "quando indicado"
+- [ ] Há prazo específico sem ressalva? → Adicionar "conforme avaliação" ou "resultados variam"
+- [ ] Há estatística sem fonte? → Remover ou pedi fonte ao cliente
+- [ ] Há superlativo médico ("mais seguro", "melhor", "definitivo")? → Substituir por linguagem qualificada
+- [ ] A copy minimiza dor, risco ou recuperação? → Adicionar ressalva sobre sensibilidade/variação
+- [ ] Se usa antes/depois, há consentimento e aviso de variação? → Confirmar respaldo
+- [ ] A urgência é real? → Se não, trocar por avaliação
+- [ ] A oferta está clara sem pressionar vulnerabilidade emocional? → Ajustar
+- [ ] O CTA orienta para avaliação, não para decisão médica imediata? → Reforçar
+- [ ] Há ressalva de avaliação individual quando o claim envolve resultado? → Incluir
+
+### Frases Seguras que Ainda Convertem
+
+**Resultado / benefício:**
+- "Valorize seus traços com naturalidade"
+- "Plano personalizado para o seu rosto"
+- "Mais viço, hidratação e textura cuidada"
+- "Um cuidado pensado para sua rotina e seus objetivos"
+- "Resultados variam, mas o planejamento é individual"
+
+**Segurança / confiança:**
+- "Avaliação individual antes de qualquer indicação"
+- "Procedimento realizado por profissional habilitado"
+- "Produtos regularizados e técnica adequada ao seu caso"
+- "Orientações claras antes, durante e depois"
+
+**Dor / recuperação:**
+- "Medidas para reduzir desconforto quando indicadas"
+- "Pode haver sensibilidade, vermelhidão ou inchaço temporário"
+- "Retorno à rotina varia conforme procedimento e orientação profissional"
+
+**Prova social:**
+- "Depoimento real com autorização"
+- "Experiência individual; resultados podem variar"
+- "Mais de [número] pacientes atendidos" — usar apenas se comprovável
+
+**CTA:**
+- "Agende sua avaliação individual"
+- "Descubra se é indicado para você"
+- "Fale com a equipe e tire suas dúvidas"
+- "Receba uma orientação inicial pelo WhatsApp"
 
 ---
 
@@ -89,7 +162,7 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 ```
 
 **Exemplo — Botox:**
-> Cansada de parecer cansada? Mesmo dormindo 8 horas, as pessoas perguntam se você está bem. As rugas da testa e pés de galinha entregam o cansaço que você não sente. O Botox relaxa os músculos que causam essas marcas — em 15 minutos, sem cortes, sem recuperação. Agende sua avaliação gratuita.
+> Cansada de parecer cansada? Linhas de expressão podem transmitir uma aparência de cansaço mesmo quando você está bem.descansada. A toxina botulínica atua relaxando músculos associados a essas marcas, com indicação individual e orientações claras antes e depois. Agende sua avaliação.
 
 ### BAB (Antes-Depois-Ponte)
 ```
@@ -97,7 +170,7 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 ```
 
 **Exemplo — Harmonização Facial:**
-> Hoje: você evita selfies, se incomoda com fotos de perfil, sente que seu rosto não te representa. Imagina: acordar, se olhar no espelho e gostar do que vê. Rosto harmônico, natural, rejuvenescido. A Dra. X tem 15 anos de experiência em harmonização com proporção áurea. Não é sobre mudar quem você é — é sobre revelar sua melhor versão. Agende sua avaliação.
+> Hoje: você sente que alguns traços poderiam estar mais equilibrados, mas tem medo de ficar artificial. A harmonização facial deve começar por avaliação, proporção e planejamento — sem padronizar rostos. A Dra. X tem 15 anos de experiência em procedimentos faciais. Agende sua avaliação individual.
 
 ### Prova Social
 ```
@@ -105,7 +178,7 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 ```
 
 **Exemplo — Skinbooster:**
-> "+3.000 pacientes tratados nos últimos 2 anos. O Skinbooster devolve a hidratação que sua pele perdeu depois dos 30. Sem agulhas visíveis, sem downtime. Agende sua sessão."
+> "Sente a pele opaca ou ressecada mesmo cuidando em casa? O Skinbooster pode ajudar a melhorar hidratação, viço e textura de forma progressiva, com protocolo definido após avaliação. Agende sua avaliação."
 
 ---
 
@@ -113,12 +186,12 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 
 | Categoria | Fórmula | Exemplo |
 |-----------|---------|---------|
-| Dor + Solução | Chega de [dor]. [Solução] em [tempo]. | "Chega de olheiras que não saem com creme. Solução em 20 minutos." |
+| Dor + Solução | [Dor] + [possibilidade segura] + [avaliação] | "Olheiras que não melhoram com creme? Descubra se existe indicação para tratamento no seu caso." |
 | Pergunta | [Pergunta que dói] | "Quanto tempo você perde se olhando no espelho e não gostando?" |
 | Número + Resultado | [X] [coisas] que [resultado] | "3 sinais de que sua pele está pedindo bioestimulador" |
 | Identidade | Para [quem] que [desejo] | "Para mulheres que querem envelhecer com naturalidade" |
 | Autoridade | [Tempo/quantidade] de [expertise] | "15 anos devolvendo autoestima — uma paciente por vez" |
-| Antes/Depois | De [estado A] a [estado B] | "Da insatisfação com o espelho à selfie sem filtro" |
+| Transformação Segura | De [incômodo] a [plano personalizado] | "Do incômodo com o espelho a um plano facial pensado para seus traços" |
 
 ---
 
@@ -140,7 +213,7 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 [Verbo de ação] + [O que ela ganha] + [Se houver, urgência/escassez]
 ```
 - "Agende sua avaliação gratuita — apenas 8 vagas esta semana"
-- "Comece sua transformação hoje"
+- "Descubra se o procedimento é indicado para você"
 - "Reserve seu horário com a Dra."
 
 ---
@@ -149,11 +222,11 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 
 | Objeção | Gatilho Psicológico | Copy de Resposta |
 |---------|---------------------|------------------|
-| "Tenho medo de agulha" | Segurança | "Usamos agulhas ultrafinas e anestesia tópica. 95% das pacientes dizem que doeu menos que depilação." |
-| "É muito caro" | ROI emocional | "Quanto vale acordar todo dia e gostar do que vê no espelho? Temos condições especiais na avaliação." |
-| "Vai ficar artificial" | Naturalidade | "A Dra. é conhecida justamente pelo resultado natural. Ninguém vai saber que você fez — só vão notar que está mais bonita." |
-| "Não tenho tempo" | Conveniência | "15 minutos no seu horário de almoço. Sem downtime, volta direto pro trabalho." |
-| "Nunca fiz, tenho vergonha" | Pertencimento | "70% das nossas pacientes chegam com essa mesma sensação. A consulta é individual, sem exposição." |
+| "Tenho medo de agulha" | Segurança | "Usamos medidas para reduzir desconforto quando indicadas, como anestesia tópica. A sensibilidade varia de pessoa para pessoa, e tudo é explicado antes do procedimento." |
+| "É muito caro" | ROI emocional | "A avaliação ajuda a entender o que realmente faz sentido para seu caso — sem empurrar procedimentos desnecessários." |
+| "Vai ficar artificial" | Naturalidade | "O objetivo é um resultado harmônico e compatível com seus traços — para que você se sinta bem sem perder sua naturalidade." |
+| "Não tenho tempo" | Conveniência | "Existem opções rápidas e planejadas para encaixar na rotina, mas indicação, tempo e cuidados variam conforme o procedimento." |
+| "Nunca fiz, tenho vergonha" | Pertencimento | "Muitas pacientes chegam com essa mesma insegurança. A consulta é individual, acolhedora e sem exposição." |
 
 ---
 
@@ -161,33 +234,78 @@ Cada parágrafo avança UM argumento. Cada slide do carrossel = UMA mensagem.
 
 ### Botox / Toxina Botulínica
 **Tom:** Cuidado, prevenção, leveza
-**Promessa:** Parecer descansada e bem
+**Promessa:** Parecer descansada e bem (com avaliação individual)
 **Copy âncora:**
-> "Você não está cansada — suas rugas estão contando uma história errada. Botox relaxa os músculos que marcam testa, olhos e boca. Resultado em 5-7 dias, duração de 4-6 meses. O procedimento mais seguro e estudado da estética mundial."
+> "Linhas de expressão podem transmitir cansaço mesmo quando você está descansada. A toxina botulínica é um procedimento amplamente estudado e utilizado na estética, quando indicado e aplicado por profissional habilitado. Avaliação individual define pontos, dose e orientações."
 
 ### Harmonização Facial
 **Tom:** Arte, proporção, personalização
-**Promessa:** Rosto harmônico, não "trabalhado"
+**Promessa:** Rosto harmônico com naturalidade e indicação individual
 **Copy âncora:**
-> "Harmonização não é modificar seu rosto — é revelar a proporção que já existe. Cada face tem sua matemática da beleza. A Dra. X planeja seu protocolo como um artista: equilíbrio, simetria, naturalidade."
+> "Harmonização facial não deve padronizar rostos. O planejamento considera proporção, equilíbrio e naturalidade para valorizar seus traços — com indicação individual."
 
 ### Preenchimento Labial
 **Tom:** Sensualidade, autoestima, desejo
-**Promessa:** Lábios proporcionais e hidratados
+**Promessa:** Lábios proporcionais, hidratados e com naturalidade
 **Copy âncora:**
-> "Lábios que pedem um batom. Sem exagero, sem bico de pato. Hidratação profunda + contorno que valoriza seu sorriso. Resultado imediato, volta às atividades normais no mesmo dia."
+> "Preenchimento labial com foco em proporção, hidratação e contorno — sem exageros e respeitando sua naturalidade. É possível notar mudança inicial, mas resultado final, inchaço e retorno à rotina variam conforme cada caso."
 
 ### Skinbooster / Skinquality
-**Tom:** Tecnologia, juventude, pele perfeita
-**Promessa:** Glass skin, pele de porcelana
+**Tom:** Tecnologia, cuidado, qualidade de pele
+**Promessa:** Viço, hidratação e textura mais cuidada
 **Copy âncora:**
-> "Sua pele perde 1% de colágeno por ano depois dos 25. O Skinbooster injeta ácido hialurônico puro — hidratação de dentro pra fora. Pele iluminada em 7 dias. O segredo das coreanas agora na sua cidade."
+> "Com o tempo, a pele pode perder viço e hidratação. O Skinbooster usa ácido hialurônico para ajudar na qualidade da pele, com melhora progressiva conforme protocolo indicado e resposta individual."
 
 ### Bioestimulador de Colágeno (Sculptra®, Radiesse®)
 **Tom:** Ciência, longo prazo, investimento
-**Promessa:** Rejuvenescimento progressivo e natural
+**Promessa:** Rejuvenescimento progressivo e natural (resultados variam)
 **Copy âncora:**
-> "Enquanto o Botox relaxa, o bioestimulador reconstrói. Ele ensina seu corpo a produzir colágeno novo. O resultado não aparece em 2 dias — aparece em 3 meses. E dura 2 anos. Para quem pensa no futuro da pele."
+> "Enquanto a toxina botulínica atua na contração muscular, o bioestimulador ajuda a estimular produção de colágeno de forma progressiva. Evolução e duração variam conforme produto, metabolismo, indicação e plano de manutenção."
+
+---
+
+## Image-Based Copy Generation Workflow
+
+Quando o usuário envia uma **imagem de referência** (ex: criativo do concorrente, moodboard, foto do procedimento) e pede copy para acompanhar:
+
+### ❌ NÃO delegar `vision_analyze`
+
+`delegate_task` herda o modelo do orquestrador. Testado em 2026-05-14 — 3 falhas consecutivas:
+1. **GLM-5.1** (portões 1-4 do pipeline criativo): falha — modelo não tem capacidade de visão
+2. **qwen3-vl:235b** (modelo de visão): timeout em 600s, resposta nula
+3. **deepseek-v4-pro** (síntese final): falha — modelo não tem capacidade de visão
+
+Bug adicional no kimi-k2.6 (opencode-go): o campo `reasoning_details` retornado na primeira chamada é rejeitado como input inválido na segunda chamada (`Extra inputs are not permitted, field: messages[N].reasoning_details`), quebrando pipelines multi-turn.
+
+### ✅ Workaround correto
+
+1. **Pedir ao usuário para enviar imagens diretamente no chat** (como fotos no Telegram)
+2. O orquestrador/analista executa `vision_analyze` **diretamente** (sem delegation)
+3. Extrai elementos visuais: cores, composição, expressões, texto visível, estilo, emoção
+4. Passa a **descrição textual** extraída para o Creative Agent via `context`
+5. O Creative Agent gera a copy a partir da descrição textual (sem precisar de visão)
+
+### Fluxo recomendado
+
+```
+Usuário envia imagem no chat
+        ↓
+Orquestrador → vision_analyze (executado localmente, não delegado)
+        ↓
+Extrai: cores, layout, expressão facial, ambiente, estética, texto visível
+        ↓
+Injeta descrição no context do Creative Agent
+        ↓
+Creative Agent gera copy (headline, corpo, CTA) baseado na descrição
+        ↓
+Revisor valida compliance + naturalidade + alinhamento com a imagem
+```
+
+### Fallback (se vision_analyze falhar)
+
+- Gerar copy baseada em descrição verbal do usuário
+- Disclaimer obrigatório: "⚠️ Copy gerada sem análise visual — validar com referências do cliente"
+- Máximo 1 tentativa de delegação; se falhar, usar abordagem alternativa imediatamente
 
 ---
 
