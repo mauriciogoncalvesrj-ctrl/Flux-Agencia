@@ -1,7 +1,7 @@
 ---
 name: flux-model-routing
 description: "Model routing intelligence for Agência Flux after the 2026-05-15 migration away from Ollama Cloud. Maps GPT/OpenAI Codex + OpenCode Go models to operational roles, fallback chains, provider quirks, profile configs, and spending policy. Use before setting model.provider, before delegating tasks to specialist profiles, or when selecting which LLM to use for any Flux pipeline stage."
-version: 2.0.0
+version: 2.1.0
 metadata:
   hermes:
     tags: [flux-agency, llm, routing, opencode-go, openai-codex, deepseek, gpt, models]
@@ -100,9 +100,72 @@ When primary model fails (429, timeout, model unavailable):
 4. Keep `kimi-k2.6` and `mimo-v2.5` as emergency single-turn fallbacks only.
 5. Never silently degrade in user-facing summaries — report model/provider switch.
 
+## Common Pitfalls
+
+### 1. Provider declarado mas não definido em `providers:`
+
+**Problema:** Um perfil declara `provider: openai-codex` no `model.provider` mas **não define** `providers.openai-codex` no mesmo config.yaml.
+
+**Sintoma:** Hermes tenta chamar o provider mas falha — provider desconhecido ou sem credenciais.
+
+**Antes (BUG):**
+```yaml
+model:
+  default: gpt-5.5
+  provider: openai-codex    # ← declarado mas...
+# ❌ FALTA: providers.openai-codex {...}
+```
+
+**Depois (CORRETO):**
+```yaml
+model:
+  default: gpt-5.5
+  provider: openai-codex
+providers:
+  openai-codex:              # ← ESSENCIAL
+    api_key: ${OPENAI_API_KEY}
+  opencode-go:
+    api_key: ${OPENCODE_GO_API_KEY}
+    base_url: https://opencode.ai/zen/go/v1
+```
+
+**Checklist ao configurar qualquer profile:**
+1. ✅ `model.provider` declarado
+2. ✅ `providers.<nome-do-provider>` definido com `api_key` (e `base_url` se necessário)
+3. ✅ `fallback_providers` configurado
+4. ✅ Teste rápido: `hermes run "teste" --profile <nome>`
+
+### 2. `kimi-k2.6` quebra multi-turn (delegate_task)
+
+**Problema:** `kimi-k2.6` retorna `reasoning_details` na resposta. Em multi-turn (via `delegate_task`), esse campo é reenviado como input e o provider rejeita com `HTTP 400`.
+
+**Mitigação:** `kimi-k2.6` é **fallback-only** — nunca usar como primário em nenhum perfil. Ver `references/profile-migration-pitfalls.md` e `flux-orchestrator/references/kimi-k2.6-bug-workaround.md`.
+
+### 3. Visão migrada, mas NÃO testada na prática
+
+`flux-vision` foi migrado de `qwen3-vl:235b` (Ollama Cloud) para `qwen3.5-plus` (OpenCode Go). A configuração está no lugar, mas **nenhum teste end-to-end foi feito** para confirmar que `qwen3.5-plus` aceita image input no `vision_analyze` via OpenCode Go.
+
+**Ação necessária:** Testar com uma imagem real antes de confiar na pipeline de visão.
+
+### 4. Perfil `flux-compress` — modelo não existe no novo provider
+
+`ministral-3:8b` e `gemma4:31b` são exclusivos Ollama Cloud. Na migração, `flux-compress` teve que trocar para `deepseek-v4-flash`. Sempre verificar disponibilidade do modelo no provider destino.
+
+### 5. Fallback chain do main config dessincronizada
+
+Após migração, a fallback chain do `config.yaml` principal ainda referia `glm-5.1` (opencode-go). A chain correta é:
+```
+gpt-5.5 → gpt-5.4 → deepseek-v4-flash → deepseek-v4-pro → qwen3.5-plus → kimi-k2.6
+```
+Manter sincronizada com os profiles.
+
+**Referência completa:** `references/profile-migration-pitfalls.md`
+
 ## References
 
 - `flux-orchestrator/references/model-routing-policy.md` — operational policy
 - `flux-orchestrator/references/kimi-k2.6-bug-workaround.md` — reasoning_details bug and fallback-only models
 - `flux-prompt-engineer/references/opencode-go-models.md` — model catalog for prompt/creative workflows
+- `profiles-legacy` (9 perfis) — arquivos obsoletos da era Ollama Cloud
+- `references/profile-migration-pitfalls.md` — 6 pitfalls documentados da migração Ollama → GPT/OpenCode
 - Skill: `flux-orchestrator` — decomposition + dispatch protocol
