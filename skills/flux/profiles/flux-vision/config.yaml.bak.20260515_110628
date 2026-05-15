@@ -1,18 +1,7 @@
 # Flux Vision — OCR, QA visual de criativos, screenshots, dashboards
 model:
-  default: qwen3.5-plus
-  provider: opencode-go
-
-providers:
-  opencode-go:
-    api_key: ${OPENCODE_GO_API_KEY}
-    base_url: https://opencode.ai/zen/go/v1
-
-fallback_providers:
-- provider: opencode-go
-  model: qwen3.6-plus
-- provider: openai-codex
-  model: gpt-5.5
+  default: qwen3-vl:235b
+  provider: ollama-cloud
 
 agent:
   max_turns: 25
@@ -30,3 +19,4 @@ toolsets:
 skills:
   auto_load:
   - flux-prompt-engineer
+

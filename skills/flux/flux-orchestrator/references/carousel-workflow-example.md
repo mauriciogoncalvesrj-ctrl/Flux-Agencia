@@ -165,10 +165,10 @@ delegate_task(tasks=[
 O `delegate_task` atual NÃO suporta override de modelo por task. Todos os sub-agentes usam o mesmo modelo do Orquestrador.
 
 **Workaround para o futuro:**
-- O Orquestrador pode trocar de modelo ANTES de delegar (ex: mudar para GLM-5.1 antes de delegar tarefas criativas, depois voltar para deepseek-v4-pro para síntese)
+- O Orquestrador pode separar etapas por perfil Hermes (ex: `flux-creative` para tarefas criativas, `flux-vision` para auditoria visual, `flux-orchestrator` para síntese)
 - Ou: portões 1-4 são executados pelo próprio Orquestrador (não como sub-agentes), permitindo trocar de modelo entre portões
 
-**Recomendação atual:** Para carrosséis, o Orquestrador deve usar GLM-5.1 (melhor para prompt engineering) durante os portões 1-4, e deepseek-v4-pro apenas na síntese final.
+**Recomendação atual:** Para carrosséis, usar `flux-creative` com `deepseek-v4-pro` durante os portões 1-4, `flux-vision` com `qwen3.5-plus` para análise/auditoria visual, e `flux-orchestrator` com `deepseek-v4-pro` na síntese final.
 
 ---
 
@@ -198,7 +198,7 @@ O `delegate_task` atual NÃO suporta override de modelo por task. Todos os sub-a
 | Não carregar `flux-copy-estetica` | Copy genérica, sem compliance, sem frameworks | Portão 1 OBRIGA carregar a skill |
 | Não carregar `flux-prompt-engineer` | Prompts fracos, modelo errado, sem consulta ao `prompts-db.json` | Portão 3 OBRIGA carregar a skill |
 | Não verificar dados do Research Agent | Dados de treinamento tratados como fato | Orquestrador revisa na Fase 1 e complementa com busca própria |
-| Sub-agentes sem o melhor LLM | Copy/design criados com modelo analítico em vez de criativo | Orquestrador troca para GLM-5.1 antes dos portões criativos |
+| Sub-agentes sem o melhor LLM | Copy/design/visão executados no perfil errado | Separar etapas por perfil Hermes: `flux-creative`, `flux-vision`, `flux-orchestrator` |
 | Gerar sem consultar `prompts-db.json` | Prompts duplicados, sem rastreabilidade, sem melhoria contínua | Portão 3 consulta e Portão 5 registra |
 | Não auditar com `vision_analyze` | Slides com texto alucinado, cores erradas, inconsistência visual | Portão 5 audita TODOS os slides |
 | Não registrar score no `prompts-db.json` | Base de conhecimento não evolui | Portão 5 registra com score, modelo, e notas |

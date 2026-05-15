@@ -270,10 +270,7 @@ Quando o usuário envia uma **imagem de referência** (ex: criativo do concorren
 
 ### ❌ NÃO delegar `vision_analyze`
 
-`delegate_task` herda o modelo do orquestrador. Testado em 2026-05-14 — 3 falhas consecutivas:
-1. **GLM-5.1** (portões 1-4 do pipeline criativo): falha — modelo não tem capacidade de visão
-2. **qwen3-vl:235b** (modelo de visão): timeout em 600s, resposta nula
-3. **deepseek-v4-pro** (síntese final): falha — modelo não tem capacidade de visão
+`delegate_task` herda o modelo do orquestrador. Testado em 2026-05-14 — falhas consecutivas com modelos sem visão e com modelo de visão legado em modo delegado (timeout/resposta nula). A política vigente é executar análise visual diretamente via `flux-vision`/`qwen3.5-plus`, sem delegar `vision_analyze`.
 
 Bug adicional no kimi-k2.6 (opencode-go): o campo `reasoning_details` retornado na primeira chamada é rejeitado como input inválido na segunda chamada (`Extra inputs are not permitted, field: messages[N].reasoning_details`), quebrando pipelines multi-turn.
 

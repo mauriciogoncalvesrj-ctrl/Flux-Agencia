@@ -1,16 +1,7 @@
 # Flux Compress — Compressão de contexto, triagem, títulos, resumos rápidos
 model:
-  default: deepseek-v4-flash
-  provider: opencode-go
-
-providers:
-  opencode-go:
-    api_key: ${OPENCODE_GO_API_KEY}
-    base_url: https://opencode.ai/zen/go/v1
-
-fallback_providers:
-- provider: opencode-go
-  model: deepseek-v4-pro
+  default: ministral-3:8b
+  provider: ollama-cloud
 
 agent:
   max_turns: 15

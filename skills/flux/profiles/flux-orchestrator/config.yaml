@@ -1,7 +1,20 @@
 # Flux Orquestrador — Planejamento, decomposição, coordenação
 model:
-  default: kimi-k2.6
-  provider: ollama-cloud
+  default: deepseek-v4-pro
+  provider: opencode-go
+
+providers:
+  opencode-go:
+    api_key: ${OPENCODE_GO_API_KEY}
+    base_url: https://opencode.ai/zen/go/v1
+
+fallback_providers:
+- provider: opencode-go
+  model: deepseek-v4-flash
+- provider: opencode-go
+  model: qwen3.5-plus
+- provider: opencode-go
+  model: kimi-k2.6
 
 agent:
   max_turns: 30

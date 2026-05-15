@@ -1,18 +1,7 @@
 # Flux Creative — Copy PT-BR, ideação, carrosséis, narrativas
 model:
-  default: deepseek-v4-pro
-  provider: opencode-go
-
-providers:
-  opencode-go:
-    api_key: ${OPENCODE_GO_API_KEY}
-    base_url: https://opencode.ai/zen/go/v1
-
-fallback_providers:
-- provider: opencode-go
-  model: deepseek-v4-flash
-- provider: openai-codex
-  model: gpt-5.5
+  default: gemma4:31b
+  provider: ollama-cloud
 
 agent:
   max_turns: 25
@@ -33,3 +22,4 @@ skills:
   - flux-copy-estetica
   - flux-prompt-engineer
   - flux-social-estetica
+

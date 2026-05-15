@@ -66,13 +66,13 @@ PORTÃO 5: GERAÇÃO E AUDITORIA
 
 ### LLM para Engenharia de Prompt
 
-O modelo **GLM-5.1** (opencode-go provider) é o melhor LLM disponível para engenharia de prompt de imagens:
-- 1507B parâmetros — criativo e preciso em instruções visuais
-- Forte em descrições detalhadas e composição de cenas
-- Resposta direta (não-thinking), mais rápido para iteração
+O modelo **deepseek-v4-pro** via `opencode-go` é o LLM operacional padrão para engenharia de prompt de imagens na arquitetura atual da Flux:
+- Forte em análise visual, decomposição de cena e hierarquia de composição
+- Melhor para transformar briefing + referências em prompt técnico em inglês
+- Mantém consistência com a política sem Ollama Cloud
 
-Alternativas: deepseek-v4-pro (raciocínio/qualidade), kimi-k2.6 (rapidez).
-Lista completa: `references/ollama-cloud-models.md`.
+Alternativas: `deepseek-v4-flash` (variações rápidas), `qwen3.5-plus` (análise de referências visuais), `gpt-5.5` via `openai-codex` (peças premium/críticas).
+Lista completa: `references/opencode-go-models.md`.
 
 ---
 
@@ -380,7 +380,7 @@ Após executar o pipeline, entregar:
 
 ## Arquivos de Referência
 
-- `references/ollama-cloud-models.md` — Modelos LLM disponíveis no Ollama Cloud e configuração
+- `references/opencode-go-models.md` — Modelos LLM operacionais via OpenCode Go/OpenAI Codex
 - `references/approved-prompts.md` — Índice da base de prompts aprovados + paleta de cores
 - `references/scoring-and-update-process.md` — Processo detalhado de auditoria de qualidade e atualização da base de prompts
 - `references/pre-generation-checklist.md` — **Checklist obrigatório dos 5 portões. NUNCA gerar imagem sem completar.**

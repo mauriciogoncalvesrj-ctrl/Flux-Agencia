@@ -1,18 +1,7 @@
 # Flux Meta Ads — Análise de performance, diagnóstico de campanhas, funil
 model:
-  default: deepseek-v4-flash
-  provider: opencode-go
-
-providers:
-  opencode-go:
-    api_key: ${OPENCODE_GO_API_KEY}
-    base_url: https://opencode.ai/zen/go/v1
-
-fallback_providers:
-- provider: opencode-go
-  model: deepseek-v4-pro
-- provider: openai-codex
-  model: gpt-5.5
+  default: deepseek-v4-pro
+  provider: ollama-cloud
 
 agent:
   max_turns: 30
@@ -32,3 +21,4 @@ skills:
   - flux-meta-ads-relatorio
   - flux-meta-ads-balance-alert
   - flux-luana-context
+
