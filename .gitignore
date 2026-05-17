@@ -54,3 +54,4 @@ logs/
 # skills/flux-context.md    ← contexto Flux
 # plans/                    ← planos (atualmente vazio)
 # projects/*/memory/*.md    ← memórias de projeto (contexto Flux/Mauricio)
+.mcp.json
