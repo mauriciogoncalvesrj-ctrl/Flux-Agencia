@@ -1,32 +1,22 @@
-# Flux Vision — OCR, QA visual de criativos, screenshots, dashboards
 model:
-  default: qwen3.5-plus
-  provider: opencode-go
-
+  default: gpt-5.2
+  provider: openai-codex
 providers:
-  opencode-go:
-    api_key: ${OPENCODE_GO_API_KEY}
-    base_url: https://opencode.ai/zen/go/v1
-
+  openai-codex: {}
 fallback_providers:
-- provider: opencode-go
-  model: qwen3.6-plus
 - provider: openai-codex
-  model: gpt-5.5
-
+  model: gpt-5.2
 agent:
   max_turns: 25
   reasoning_effort: high
   gateway_timeout: 1800
   tool_use_enforcement: auto
-
 toolsets:
 - vision
 - image_gen
 - file
 - memory
 - skills
-
 skills:
   auto_load:
   - flux-prompt-engineer

@@ -1,7 +1,7 @@
 ---
 name: flux-model-routing
 description: "Model routing intelligence for Agência Flux after the 2026-05-15 migration away from Ollama Cloud. Maps GPT/OpenAI Codex + OpenCode Go models to operational roles, fallback chains, provider quirks, profile configs, and spending policy. Use before setting model.provider, before delegating tasks to specialist profiles, or when selecting which LLM to use for any Flux pipeline stage."
-version: 2.1.0
+version: 2.2.0
 metadata:
   hermes:
     tags: [flux-agency, llm, routing, opencode-go, openai-codex, deepseek, gpt, models]
@@ -13,7 +13,26 @@ metadata:
 
 # Flux Model Routing — GPT + OpenCode Go
 
-> Política vigente desde **2026-05-15**: cancelar dependência de Ollama Cloud e operar com **GPT/OpenAI Codex + OpenCode Go**.
+> Política base desde **2026-05-15**: cancelar dependência de Ollama Cloud e operar com **GPT/OpenAI Codex + OpenCode Go**.
+>
+> **Override emergencial ativo desde 2026-05-24:** OpenCode Go está sem crédito por ~12 dias. Até a recarga, **toda a estrutura Flux deve rodar em `openai-codex` com `gpt-5.2`**. Isso substitui temporariamente a matriz 80/15/5 e todos os defaults/fallbacks `opencode-go` abaixo. Configs migrados: `/opt/data/config.yaml`, `/opt/data/profiles/flux-*/config.yaml` e mirrors versionados em `/opt/data/Flux-Agencia/skills/flux/profiles/flux-*/config.yaml`. Backup: `/opt/data/backups/openai-only-routing-20260524-143102`.
+>
+> **Inventário confirmado:** o endpoint Codex retornou `gpt-5.2` como modelo disponível; tratar `gpt-5.5`/`gpt-5.4` como não confirmados até nova validação.
+
+## Override emergencial — OpenAI-only
+
+| Perfil | Modelo temporário | Provider | Fallback temporário |
+|---|---|---|---|
+| `main` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-orchestrator` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-devops` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-research` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-creative` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-meta-ads` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-vision` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+| `flux-compress` | `gpt-5.2` | `openai-codex` | `gpt-5.2` |
+
+**Enquanto o override estiver ativo:** não selecionar `opencode-go`, `deepseek-v4-*`, `qwen3.*`, `kimi-k2.6`, `gpt-5.5` ou `gpt-5.4` em configs Flux. Reverter para a arquitetura híbrida somente quando os créditos OpenCode voltarem e após smoke test.
 
 ## Regra central
 

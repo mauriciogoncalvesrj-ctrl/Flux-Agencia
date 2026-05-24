@@ -1,6 +1,8 @@
 # Flux Model Routing Policy — GPT + OpenCode Go
 
-Última validação: **2026-05-15**
+Última validação: **2026-05-24**
+
+> **Override emergencial ativo:** OpenCode Go está sem crédito por ~12 dias. Até a recarga, a política operacional Flux é **OpenAI-only**: todos os perfis (`main`, `flux-orchestrator`, `flux-devops`, `flux-research`, `flux-creative`, `flux-meta-ads`, `flux-vision`, `flux-compress`) devem usar `openai-codex` + `gpt-5.2`, com fallback também em `gpt-5.2`. Não usar `opencode-go`, `deepseek-v4-*`, `qwen3.*`, `kimi-k2.6`, `gpt-5.5` ou `gpt-5.4` em configs enquanto esse override estiver ativo. Backup da migração: `/opt/data/backups/openai-only-routing-20260524-143102`.
 
 ## Objetivo
 
