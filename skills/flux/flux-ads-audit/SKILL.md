@@ -196,6 +196,14 @@ Mês 1: ...
 
 ---
 
+## Verify — Success Criteria
+
+Esta skill está funcionando quando:
+- ✅ Score 0–100 é calculado para Meta Ads e/ou Google Ads usando os pesos de severidade definidos (Critical/High/Medium/Low)
+- ✅ Pelo menos 10 achados são listados com severidade e ação recomendada, incluindo no mínimo 3 *quick wins* (<15 min) e 1 item de *kill list* quando aplicável
+- ✅ O relatório final contém as seções do template (score geral, breakdown por categoria, crítico/alto/médio, quick wins, oportunidades, kill list, plano de ação)
+- ✅ A auditoria permanece *read-only*: nenhum status/budget/creative de campanha, ad set ou anúncio ativo é alterado durante a análise
+
 ## Related Skills
 
 - **flux-meta-ads-relatorio**: Para relatórios semanais/mensais de performance (escopo diferente de auditoria)

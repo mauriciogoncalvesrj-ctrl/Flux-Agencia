@@ -166,6 +166,22 @@ Forneça a versão completa reescrita da página, mantendo:
 
 ---
 
+## Verify — Success Criteria
+
+- O relatório inclui **Score Atual (0–100)**, **Score Projetado (0–100)** e **Potencial de melhoria (+X)**, e o score é **decomposto** em 4 blocos com soma explícita:
+  - Autoridade & Confiança (0–30)
+  - Estrutura para IAs (0–30)
+  - Conteúdo Único & Específico (0–25)
+  - Técnico (0–15)
+- A seção **“Problemas Críticos”** traz **exatamente 5 problemas**, cada um com:
+  - **Impacto em pontos** (ex: “-8 pts”)
+  - **1 trecho atual** (citação) e **1 sugestão reescrita** (citação)
+- A **Versão Otimizada Sugerida** contém:
+  - **1 título (H1)** e uma hierarquia de headings coerente (H2/H3)
+  - **≥ 6 perguntas de FAQ** formuladas como pacientes perguntam (perguntas literais)
+- As sugestões incluem **entidades nomeadas completas** (nome da clínica + cidade/bairro + forma de contato) em **pelo menos 3 pontos** do texto reescrito.
+- O plano de implementação menciona **schema markup** (FAQ + LocalBusiness + Article) e lista **≥ 3 campos de data** recomendados (ex: `datePublished`, `dateModified`, `lastReviewed`).
+
 ## Related Skills
 
 - **flux-agency-standards**: Consulte para padrões de qualidade, template canônico e tools registry da Flux. Use ao criar ou auditar qualquer skill do domínio flux/.

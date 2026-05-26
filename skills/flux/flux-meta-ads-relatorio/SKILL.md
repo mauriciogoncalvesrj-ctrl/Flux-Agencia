@@ -240,6 +240,14 @@ Usar **Puppeteer (Node.js)** — `fpdf2`/`reportlab` Python não estão disponí
 
 ---
 
+## Verify — Success Criteria
+
+Esta skill está funcionando quando:
+- ✅ Para cada conta com `spend > 0` no período, o relatório semanal/mensal é gerado com período correto (semanal = últimos 7 dias; mensal = mês anterior completo)
+- ✅ As métricas principais (impressões, alcance, cliques, CTR, spend, mensagens e custo por mensagem quando aplicável) batem com os dados retornados pelo `mcp_meta_ads_get_insights`/Graph API para o mesmo `time_range`
+- ✅ O ranking TOP 5 traz 5 anúncios ordenados por mensagens, com `ad_name`, mensagens, CPA calculado (`spend/mensagens`), CTR e permalink do Instagram quando a chain `ad → creative → media → permalink` resolver
+- ✅ A saída está pronta para copiar/colar no WhatsApp: formatação BR (R$ e separadores), e nenhuma linha de link é exibida quando o permalink não puder ser resolvido
+
 ## Related Skills
 
 - **flux-agency-standards**: Template canônico, tools registry e product-marketing-context — base para todas as skills Flux

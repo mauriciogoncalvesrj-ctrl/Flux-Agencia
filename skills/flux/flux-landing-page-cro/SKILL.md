@@ -280,6 +280,15 @@ Próximo review: [data]
 
 ---
 
+## Verify  Success Criteria
+
+- **Entrada m ednima capturada:** o relat f3rio registra **URL**, **convers e3o prim e1ria** (ex.: clique WhatsApp), **taxa atual vs meta** (ou explicitamente  absem dados bb) e **tr e1fego mensal** (ou a aus eancia dele).
+- **Auditoria heur edstica completa:** avaliou os **15 crit e9rios** com nota **15** e apresentou **score m e9dio**.
+- **Fric e7 f5es bem formadas:** listou ** b5 5 fric e7 f5es**, cada uma contendo **localiza e7 e3o**, **impacto**, **evid eancia** e o mecanismo de fric e7 e3o (psicol f3gico/t e9cnico).
+- **Hip f3teses test e1veis:** para ** b5 5 fric e7 f5es**, formulou hip f3teses no formato **Seent e3oporque** com um resultado esperado mensur e1vel (ex.:  ab+30% CTR do WhatsApp bb).
+- **Prioriz e7 e3o ICE aplicada:** inclui tabela/linha por hip f3tese com **I, C, E, ICE** e aloca em **Onda 1/2/3/4**, com ** b5 3 Quick Wins (ICE  b5 8)**.
+- **Plano de implementa e7 e3o acion e1vel:** cada item da Onda 1 descreve exatamente **o que mudar** (texto/layout/posi e7 e3o), fornece **copy sugerida** (quando aplic e1vel) e indica **como medir** a mudan e7a (CTR WhatsApp e 1 m e9trica secund e1ria).
+
 ## Related Skills
 
 - **flux-ads-audit**: Se o problema for tráfego (pouca visita) e não conversão, auditar os anúncios antes da LP

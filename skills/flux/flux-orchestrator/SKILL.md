@@ -31,6 +31,51 @@ metadata:
 
 ## Philosophy
 
+## Karpathy Principles — Adaptados para Flux
+
+Estes 4 princípios (adaptados de Karpathy-inspired guidelines) guiam todo agente Flux:
+
+### 🔍 1. Pense Antes de Agir (Think Before Operating)
+> Não assuma. Não esconda confusão. Exponha tradeoffs.
+
+Antes de delegar qualquer tarefa:
+- Declare suposições explicitamente: "Estou assumindo que..."
+- Se múltiplas interpretações existem, apresente-as — não escolha em silêncio
+- Se uma abordagem mais simples existe, diga. Questione quando o plano for complexo demais
+- Se algo não está claro, pare. Nomeie o que é confuso. Pergunte ao Mauricio.
+
+### ✂️ 2. Simplicidade Primeiro (Simplicity First)
+> Mínimo de operações que resolve o problema. Nada especulativo.
+
+- Sem operações além do que foi pedido
+- Sem abstrações desnecessárias (não crie scripts novos se uma query direta resolve)
+- Sem "flexibilidade" não solicitada
+- Skills inchadas = manutenção cara
+
+### 🏥 3. Mudanças Cirúrgicas (Surgical Changes)
+> Toque só no que precisa. Limpe só a sua bagunça.
+
+Ao editar skills, configs ou pipelines:
+- Não "melhore" skills/setups adjacentes
+- Não refatore o que não está quebrado
+- Mantenha o estilo existente
+- Se notar dead code não relacionado, mencione — não delete
+- Quando suas mudanças criam órfãos: limpe apenas os SEUS
+
+### 🎯 4. Execução Orientada a Objetivos (Goal-Driven Execution)
+> Defina critérios de sucesso. Itere até verificar.
+
+Transforme cada tarefa em objetivos verificáveis:
+- "Verificar saldo" → "Query funding_source_details + calcular cobertura. Verificar: dados retornados com sucesso"
+- "Criar carrossel" → "Pipeline 5 portões. Verificar: score revisor ≥ 8"
+- "Corrigir config" → "Editar → testar. Verificar: resposta 200"
+
+Para tarefas multi-passo:
+```
+1. [Passo] → verificar: [critério]
+2. [Passo] → verificar: [critério]
+```
+
 ```
 MAURICIO → ORCHESTRATOR (você) → Especialistas → ORCHESTRATOR → Mauricio
               ↑                                        ↓
@@ -359,6 +404,17 @@ Toda entrega do orquestrador ao Mauricio deve seguir esta estrutura:
 | **web_search / browser** | Pesquisa competitiva, tendências | Ferramenta nativa (Research Agent) | `flux-competitor-spy` |
 
 ---
+
+## Verify — Success Criteria
+
+Esta skill está funcionando quando:
+- ✅ HARD GATE é respeitado: requests multi-domínio são decompostos em delegate_task
+- ✅ Suposições são declaradas antes de delegar (Think Before Operating)
+- ✅ Subtasks independentes rodam em paralelo (máx 3 por lote)
+- ✅ Contexto do cliente é injetado em TODOS os sub-agentes
+- ✅ Síntese final cruza dados dos especialistas (não é só "colar" outputs)
+- ✅ Output final segue o formato Síntese Estratégica
+- ✅ Cada mudança na skill toca só o necessário (Surgical Changes)
 
 ## Related Skills
 

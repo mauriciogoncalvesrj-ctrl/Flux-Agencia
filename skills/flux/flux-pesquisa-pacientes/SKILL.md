@@ -149,6 +149,19 @@ Categorizar as perguntas que chegam:
 2. Tem autorização para gravar? (Melhor que anotar)
 3. Algum procedimento específico para focar? (Harmonização? Skinbooster?)
 
+## Verify — Success Criteria
+
+- O plano de coleta define **quantidade e fonte** de dados, atendendo ao mínimo:
+  - **5 entrevistas 1:1** (ou justificativa explícita se não for possível)
+  - **30 reviews** minerados (clínica + concorrentes somados) com links/fonte registrados
+- O relatório final inclui **10+ citações verbatim** (frases entre aspas) distribuídas em:
+  - problema/dor, solução/resultado e objeções (ao menos 3 por categoria)
+- A seção **Padrões Encontrados** traz **3+ temas** com **contagem** (ex: 8 de 12) e uma **implicação para copy** por tema.
+- A entrega inclui **recomendações acionáveis**:
+  - **5+ headlines** baseadas em linguagem real
+  - listas preenchidas de **5+ palavras/expressões para usar** e **5+ para evitar**
+- Conformidade: o output registra **status de consentimento** (1 linha) indicando se houve autorização para gravação/transcrição (sim/não) e como os dados foram anonimizados.
+
 ## Skills Relacionadas
 
 | Skill | Quando usar |

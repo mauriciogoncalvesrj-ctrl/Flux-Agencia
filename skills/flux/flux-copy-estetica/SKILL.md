@@ -425,6 +425,16 @@ Quando escrever copy, entregar neste formato:
 
 ---
 
+## Verify — Success Criteria
+
+- **Formato entregue completo:** o output final inclui **Canal**, **Procedimento**, **Objetivo**, **Headline** (com alternativa), **Corpo**, **CTA** (com alternativa) e **Notas** (pelo menos 1 justificativa do porquê da escolha).
+- **Adequação ao canal (mensurável):**
+  - Instagram legenda: parágrafos de **1–3 frases** e **primeira linha com hook** (máx. **60 caracteres**), e CTA no final.
+  - WhatsApp: **1–2 parágrafos** + **1 pergunta de encaminhamento** (ex.: melhor horário) para reduzir atrito.
+- **Compliance sem violações:** o texto não contém **promessa garantida**, **superlativos absolutos** (ex.: “o melhor”, “definitivo”), nem claims proibidos (“sem dor”, “sem riscos”, “milagroso”). Quando houver benefício/resultado, inclui **qualificadores** (ex.: “pode ajudar”, “quando indicado”, “após avaliação”) e/ou “**resultados variam**”.
+- **Especificidade:** inclui **1 oferta concreta** (ex.: avaliação, condição, bônus) e **1 mecanismo de confiança** (ex.: avaliação individual, profissional habilitado, produtos regularizados, CRM/CRO quando fornecido).
+- **Coerência de message match:** a oferta e o CTA do texto são **idênticos** aos termos fornecidos pelo usuário (sem inventar preço, prazo, número de vagas ou estatísticas).
+
 ## Related Skills
 
 - **flux-prompt-engineer**: Para gerar a IMAGEM que acompanha esta copy. A copy vai primeiro, depois a imagem.

@@ -254,6 +254,14 @@ Veja também: `references/b2b-donos-clinicas-estetica.md`
 
 ---
 
+## Verify — Success Criteria
+
+- **Cobertura mínima:** coletou pelo menos **20 anúncios** *ou* **≥ 5 concorrentes** (o que ocorrer primeiro) para o termo e região informados.
+- **Campos completos por anúncio:** para **≥ 90%** dos anúncios coletados, registrou: **copy**, **headline/chamada**, **tipo de mídia**, **plataformas**, **data de início** e **CTA** (presente/qual).
+- **Análise com notas:** para cada concorrente listado, atribuiu **Força da Copy (1–5)** e **Força do Criativo (1–5)** e justificou cada nota com **≥ 2 evidências observáveis** (ex.: gatilhos, presença de antes/depois, sobreposição de texto).
+- **Insights acionáveis:** entregou **≥ 3 recomendações específicas** para a Flux (cada uma com *o que fazer*, *por que* e *qual evidência do benchmark*), além de **≥ 2 oportunidades/gaps** que a concorrência não explora.
+- **Falhas de acesso tratadas:** se Meta Ad Library bloqueou, registrou o erro (ex.: `NAVIGATION_FAILED`/challenge) e forneceu **um plano de fallback** (busca manual + prints + campos a capturar) em vez de repetir tentativas indefinidamente.
+
 ## Related Skills
 
 - **flux-ads-audit**: Para auditar a qualidade dos anúncios após a espionagem — use quando quiser avaliar se os anúncios do cliente estão competitivos vs. concorrentes

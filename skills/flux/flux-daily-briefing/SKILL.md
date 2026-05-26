@@ -194,6 +194,19 @@ Pesquisar: miscelânea relevante.
 
 ---
 
+## Verify — Success Criteria
+
+- O briefing final contém **as 7 seções obrigatórias** (1–7) **na mesma ordem** definida na skill, com títulos/numeração visíveis.
+- Para cada tópico com novidades:
+  - há **2–3 itens** (nunca mais que 3)
+  - cada item tem **1 link de fonte** (URL) imediatamente associado
+- Para cada tópico sem novidades relevantes, o texto **é exatamente**: `✅ Sem novidades significativas hoje.`
+- O header inclui **DATA** fornecida pelo usuário e o horário `09:00 UTC` conforme o template.
+- O bloco **RESUMO DO DIA** está presente e inclui:
+  - **1 Destaque** (1 frase)
+  - **1 Ação recomendada** (1 ação clara e executável)
+- O texto completo é curto o suficiente para **caber em uma única mensagem no Telegram** (meta: **≤ 3500 caracteres**); se exceder, reduzir itens antes de enviar.
+
 ## Related Skills
 
 - **flux-agency-standards**: Template canônico e padrões de qualidade — base para todas as skills Flux

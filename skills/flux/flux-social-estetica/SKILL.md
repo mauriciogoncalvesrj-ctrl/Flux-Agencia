@@ -328,6 +328,14 @@ Ao ser solicitado, produza conteúdo seguindo este formato:
 
 ---
 
+## Verify — Success Criteria
+
+- **Briefing preenchido:** o output inclui os campos **Cliente**, **Pilar (1–5)**, **Formato**, **Objetivo** e **Procedimento em foco** (quando aplicável) — sem placeholders.
+- **Entrega completa por peça:** cada item entregue vem com **Copy final**, **Briefing visual** e **Hashtags**; para Reels, inclui também **Áudio sugerido**.
+- **Distribuição por pilares (mensurável):** em um plano semanal, a proporção de posts segue (tolerância de ±10pp): **30% Educação**, **25% Transformação**, **20% Conexão**, **15% Objeção**, **10% Oferta**.
+- **CTA presente:** **100%** das legendas e roteiros incluem **um CTA único e explícito** (salvar, comentar, compartilhar ou chamar no WhatsApp), alinhado ao objetivo.
+- **Compliance:** quando houver antes/depois/prova social, inclui a frase: **"Resultado real de paciente. Autorização de uso de imagem concedida."** (ou sinaliza que é necessário obter autorização antes de publicar).
+
 ## Related Skills
 
 - **flux-prompt-engineer**: Para gerar imagens profissionais para os posts. Sempre delegar geração de imagem para esta skill com briefing detalhado do contexto visual.

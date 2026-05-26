@@ -176,6 +176,14 @@ O saldo pode acabar em breve. Faca uma recarga!
 | `/opt/data/scripts/meta_ads_real_balance.py` | Queries Graph API with `act_` prefix, extracts real balance from `funding_source_details.display_string`, calculates 7d spend and coverage |
 | `/opt/data/scripts/meta_ads_motiva_sms_context.sh` | Wrapper that generates SMS JSON for the 4 Motiva accounts in test mode |
 
+## Verify — Success Criteria
+
+- ✅ **Real balance** é extraído de `funding_source_details.display_string` (não do campo `balance`).
+- ✅ **Coverage days** é calculado corretamente (`saldo / media_7dias`, onde `media_7dias = spend_7d / 7`).
+- ✅ Contas com **< 3 dias** recebem **SMS via GHL** (`mcp_ghl_send_sms`).
+- ✅ Contas de **cartão de crédito** (`type = 1`) são identificadas e reportadas **sem** calcular cobertura.
+- ✅ Resumo no **Telegram** inclui **todas** as contas agrupadas por criticidade (🚨⚠️✅).
+
 ## Related Skills
 
 - **`flux-meta-ads-relatorio`**: Weekly/monthly Meta Ads performance reports. Shares the same Graph API token, account list, and `DISPLAY_NAMES` map. See its `references/graph-api-quirks.md` for detailed API field validity notes.

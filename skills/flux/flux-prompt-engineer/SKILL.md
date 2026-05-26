@@ -367,6 +367,14 @@ Após executar o pipeline, entregar:
 
 ---
 
+## Verify — Success Criteria
+
+- **Saída com checklist completo:** o output inclui **Prompt utilizado**, **Modelo**, **Formato (dimensões/aspect ratio)**, **Score (1–10)** e a **análise em 5 dimensões** (Legibilidade, Coerência visual, Hierarquia, CTA, Premium feel).
+- **Conformidade técnica do prompt:** prompt principal está em **inglês**, tem **80–300 palavras**, e termina com **exclusões explícitas** (ex.: `NO people`, `NO logos`, `NO text` quando aplicável).
+- **Aderência ao briefing:** **100%** do texto visível solicitado (headline/subtítulo/CTA) é **idêntico** à copy aprovada (sem inventar frases novas) e o **aspect ratio** corresponde à plataforma pedida.
+- **Qualidade mínima:** se **Score < 8**, o resultado vem com **≥ 1 problema concreto** e **≥ 1 ação corretiva** (indicando qual portão do pipeline deve ser ajustado) antes de nova tentativa.
+- **Persistência da aprovação:** se **Score ≥ 8**, indica exatamente onde registrar/atualizar no **`/opt/data/flux-tools/prompts-db.json`** (categoria/chave) e inclui o **score final** a ser salvo.
+
 ## Related Skills
 
 - **fal-ai**: Fonte de verdade para API/MCP/pricing dos modelos de geração. Usar para detalhes técnicos e execução.
