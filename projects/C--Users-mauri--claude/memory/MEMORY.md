@@ -6,3 +6,4 @@
 - [Flux Agency Architecture Plan](flux-agency-architecture-plan.md) — Plano de implementação multi-agente: vault, workflows, 2 agentes novos (Design + QA), quality gate — pronto para executar quando quiser
 - [VPS Setup Completo](vps-setup.md) — VPS 2.24.85.2: Claude Code 2.1.177, Telegram bot com sessões, 7 modelos (Xiaomi+FreeBuff), 15 skills, projeto flux-vps, FreeBuff como proxy Codebuff
 - [Content Engine Pipeline](content-engine-pipeline.md) — Pipeline unificado de conteúdo: copy via mimo API + imagens Fal.ai + overlay Pillow, totalmente funcional desde 2026-06-27
+- [Content Orchestration Plan](content-orchestration-plan.md) — Plano de orquestração: 5 setores (Inteligência→Estratégia→Criação→Qualidade→Distribuição), agentes paralelos, quality gate, vault system
