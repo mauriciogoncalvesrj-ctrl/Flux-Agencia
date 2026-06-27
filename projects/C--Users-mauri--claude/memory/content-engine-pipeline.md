@@ -9,14 +9,16 @@ metadata:
 
 # Content Engine Pipeline — Funcional
 
-## Status: ✅ OPERACIONAL (2026-06-27)
+## Status: ✅ OPERACIONAL — SCORE 8.5/10 (2026-06-27)
 
 ## O que foi feito
-1. **Copy generation** migrada de Ollama Cloud (quebrado) para API mimo (Anthropic format)
+1. **Copy generation** — API mimo-v2.5-pro (Anthropic format), hooks aprovados, UPPERCASE, tom agressivo
 2. **Fontes** Montserrat Black + Bold + Inter baixadas em `assets/fonts/`
-3. **Overlay** Pillow melhorado (texto maior, vinheta mais forte, subtítulo legível)
-4. **Prompts de fundo** variados por tipo de slide (cover, problem, solution, CTA)
-5. **Parser de resposta** mimo API corrigido (trata thinking blocks)
+3. **Overlay** Pillow — branco para headline (não ciano), dourado para CTA, selo FLUX, somosflux.com.br
+4. **Prompts de território** — 5 territórios visuais (Dona Sobrecarregada, Agenda Vazando, WhatsApp Sistema, Operação Silenciosa, Dossiê)
+5. **Parser mimo API** — trata thinking blocks
+6. **Brand rules** — paleta preto+dourado, hooks aprovados, CTAs aprovados, compliance ANVISA/CFM
+7. **CCR configurado** — 3 providers (mimo ativo, MiniMax e OpenCode Go prontos)
 
 ## Pipeline: `C:\Users\mauri\flux\engines\content-engine\`
 
